@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Lasse/Schleim-1.gd" type="Script" id=1]
+[ext_resource path="res://Marlon/Scheim-Animation/Schleim-1.png" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+
+[node name="Schleim-1" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 131, 121 )
+scale = Vector2( 16.1875, 14.875 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D/Schleim-1"]
+position = Vector2( 0, -9.53674e-07 )
+polygon = PoolVector2Array( -4.94209, 2.95798, -4.07722, 3.02521, -4.01544, 3.89916, 4.88031, 3.96639, 5.00386, 3.09244, 5.9305, 3.02521, 5.99228, -1.0084, 5.06564, -1.0084, 5.00386, -1.94958, 4.01544, -2.01681, 3.95367, -3.02521, 3.02703, -3.02521, 2.96525, -3.96639, -2.03861, -3.96639, -2.03861, -3.15966, -2.96525, -3.02521, -3.02703, -2.01681, -3.95367, -2.01681, -4.01544, -1.07563, -5.00386, -0.941176 )
