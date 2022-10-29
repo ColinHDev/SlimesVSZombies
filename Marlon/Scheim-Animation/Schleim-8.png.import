@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Schleim-7.png-93b708ca64ba81a9a13c0c97ac796ed9.stex"
+path="res://.import/Schleim-8.png-270b50aee71dcc81d07a49ef23fcb0dd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scheim-Animation/Schleim-7.png"
-dest_files=[ "res://.import/Schleim-7.png-93b708ca64ba81a9a13c0c97ac796ed9.stex" ]
+source_file="res://Marlon/Scheim-Animation/Schleim-8.png"
+dest_files=[ "res://.import/Schleim-8.png-270b50aee71dcc81d07a49ef23fcb0dd.stex" ]
 
 [params]
 
