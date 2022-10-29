@@ -11,6 +11,7 @@ var slime = preload("res://Colin/Slime.tscn")
 func _ready():
 	pass # Replace with function body.
 
+export var lanes = [100, 200, 300, 400, 500, 600, 700];
 
 var i = 0
 var rng = RandomNumberGenerator.new()
@@ -21,6 +22,6 @@ func _process(delta):
 	if i >= 100:
 		var slimeInstance = slime.instance()
 		rng.randomize()
-		slimeInstance.position.x += rng.randi_range(0, 1000)
+		slimeInstance.position.x += lanes[rng.randi_range(0, lanes.size() - 1)]
 		get_parent().add_child(slimeInstance)
 		i = 0
