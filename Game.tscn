@@ -1,9 +1,18 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://TestButton.gd" type="Script" id=1]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Panel" type="Panel" parent="."]
 margin_left = 828.0
-margin_top = 1.0
-margin_right = 1022.0
-margin_bottom = 599.0
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="Button" type="Button" parent="Panel"]
+margin_left = 46.0
+margin_top = 60.0
+margin_right = 150.0
+margin_bottom = 173.0
+text = "Test"
+script = ExtResource( 1 )

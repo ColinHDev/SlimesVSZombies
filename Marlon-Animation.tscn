@@ -5,6 +5,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 6, 7 )
+position = Vector2( 456, 60.5 )
+scale = Vector2( 57.25, 7.6875 )
 frames = ExtResource( 1 )
 frame = 10
