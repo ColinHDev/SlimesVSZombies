@@ -1,25 +1,31 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Marlon/Schleim-Animiert2.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Marlon/Schleim-Animiert.tres" type="SpriteFrames" id=2]
 [ext_resource path="res://Marlon/Schleim-Animiert-hop.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://Marlon/Test1/Plort.png" type="Texture" id=4]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Slime-Crazy" type="AnimatedSprite" parent="."]
+[node name="Slime-Derpy" type="AnimatedSprite" parent="."]
 position = Vector2( 74.5, 60.5 )
 scale = Vector2( 9.5625, 7.6875 )
 frames = ExtResource( 2 )
-frame = 6
+frame = 7
 
 [node name="Slime-Idle" type="AnimatedSprite" parent="."]
 position = Vector2( 246, 62 )
 scale = Vector2( 9.5625, 7.6875 )
 frames = ExtResource( 1 )
-frame = 2
+frame = 1
 
 [node name="Slime-Hop" type="AnimatedSprite" parent="."]
 position = Vector2( 405, 61 )
 scale = Vector2( 9.5625, 7.6875 )
 frames = ExtResource( 3 )
-frame = 2
+frame = 3
+
+[node name="Plort" type="Sprite" parent="."]
+position = Vector2( 510, 59 )
+scale = Vector2( 3.59375, 3.59375 )
+texture = ExtResource( 4 )
