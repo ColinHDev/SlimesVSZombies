@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Colin/Slime.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Colin/Game.gd" type="Script" id=2]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Slime" parent="." instance=ExtResource( 1 )]
+visible = false
+position = Vector2( 83, 57 )

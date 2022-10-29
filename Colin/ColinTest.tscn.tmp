@@ -7,5 +7,5 @@
 script = ExtResource( 1 )
 
 [node name="Slime" parent="." instance=ExtResource( 2 )]
-
-[connection signal="child_exiting_tree" from="." to="." method="child_exiting_tree"]
+position = Vector2( 83, 57 )
+size = null

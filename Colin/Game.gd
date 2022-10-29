@@ -5,13 +5,29 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-var slime = preload("res://Colin/Slime.tscn")
+onready var Slime = preload("res://Colin/Slime.tscn")
+const laneCount: int = 5
+var lanes: Array = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	# ToDo: If the window is resized (entering full screen mode), the camera size also changes
+	# so all of the following calculations are no longer matching the screen size
+	lanes.resize(laneCount)
+	var spaceBetweenLanes = (get_viewport_rect().size.x - 400) / (laneCount - 1)
+	for i in range(0, laneCount):
+		lanes[i] = 200 + spaceBetweenLanes * i
 
-var lanes = [100, 200, 300, 400, 500, 600, 700];
+func resizeLanes() -> void:
+	var newLanes: Array = []
+	newLanes.resize(laneCount)
+	var spaceBetweenLanes = (get_viewport_rect().size.x - 400) / (laneCount - 1)
+	for i in range(0, laneCount):
+		newLanes[i] = 200 + spaceBetweenLanes * i
+	for child in get_children():
+		if child.get:
+			child.position.x = newLanes[child.getLane()]
+	lanes = newLanes
 
 var i = 0
 var rng = RandomNumberGenerator.new()
@@ -20,22 +36,10 @@ var rng = RandomNumberGenerator.new()
 func _process(delta):
 	i += 1
 	if i >= 100:
-		var slimeInstance = slime.instance()
+		var slimeInstance = Slime.instance()
 		rng.randomize()
-		slimeInstance.position.x += lanes[rng.randi_range(0, lanes.size() - 1)]
+		slimeInstance.position.x = lanes[rng.randi_range(0, lanes.size() - 1)]
+		rng.randomize()
+		slimeInstance.size = rng.randi_range(1, 4)
 		self.add_child(slimeInstance)
 		i = 0
-
-func child_exiting_tree(node: Node):
-	if node.get_filename() == slime.instance().get_filename():
-		if (node.size > 1):
-			var slimeInstance1 = slime.instance()
-			slimeInstance1.size = node.size - 1;
-			slimeInstance1.position.y = node.position.y
-			var slimeInstance2 = slimeInstance1.duplicate()
-			
-			slimeInstance1.position.x = max(node.position.x - 100, lanes[0])
-			slimeInstance2.position.x = min(node.position.x + 100, lanes[lanes.size() - 1])
-			
-			self.add_child(slimeInstance1)
-			self.add_child(slimeInstance2)
