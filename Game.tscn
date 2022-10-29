@@ -1,8 +1,75 @@
+<<<<<<<
 [gd_scene format=2]
+=======
+[gd_scene load_steps=5 format=2]
+>>>>>>>
 
+<<<<<<<
+
+=======
+[ext_resource path="res://slime_plort.gd" type="Script" id=1]
+[ext_resource path="res://plortButton.gd" type="Script" id=2]
+[ext_resource path="res://potion.gd" type="Script" id=3]
+[ext_resource path="res://ui.gd" type="Script" id=4]
+
+>>>>>>>
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
 
+<<<<<<<
 [node name="Panel" type="Panel" parent="."]
 margin_left = 828.0
+=======
+[node name="player_panel" type="Panel" parent="."]
+margin_left = 824.0
+>>>>>>>
 margin_right = 1024.0
 margin_bottom = 600.0
+
+<<<<<<<
+
+=======
+[node name="resource_subpanel" type="Panel" parent="player_panel"]
+margin_right = 196.0
+margin_bottom = 59.0
+
+[node name="slime_plort" type="Label" parent="player_panel/resource_subpanel"]
+margin_left = 38.0
+margin_top = 7.0
+margin_right = 78.0
+margin_bottom = 21.0
+text = "0"
+script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="player_panel"]
+margin_left = 33.0
+margin_top = 169.0
+margin_right = 151.0
+margin_bottom = 266.0
+text = "Add plort"
+script = ExtResource( 2 )
+
+[node name="potion_subpanel" type="Panel" parent="player_panel"]
+margin_top = 61.0
+margin_right = 200.0
+margin_bottom = 151.0
+
+[node name="potion1" type="Label" parent="player_panel/potion_subpanel"]
+margin_left = 27.0
+margin_top = 14.0
+margin_right = 67.0
+margin_bottom = 28.0
+text = "0"
+script = ExtResource( 3 )
+
+[node name="potion_button" type="Button" parent="player_panel"]
+margin_left = 32.0
+margin_top = 285.0
+margin_right = 171.0
+margin_bottom = 366.0
+text = "Brew Potion"
+
+[connection signal="pressed" from="player_panel/Button" to="player_panel/resource_subpanel/slime_plort" method="_on_Button_pressed"]
+[connection signal="pressed" from="player_panel/potion_button" to="." method="_on_potion_button_pressed"]
+
+>>>>>>>
