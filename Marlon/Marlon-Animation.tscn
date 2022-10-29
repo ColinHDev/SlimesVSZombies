@@ -1,10 +1,11 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Marlon/Schleim-Animiert2.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Marlon/Schleim-Animiert.tres" type="SpriteFrames" id=1]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 8, 8 )
+position = Vector2( 456, 60.5 )
+scale = Vector2( 57.25, 7.6875 )
 frames = ExtResource( 1 )
-frame = 1
+frame = 10

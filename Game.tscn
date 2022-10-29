@@ -1,9 +1,22 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://slime_plort.gd" type="Script" id=1]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Panel" type="Panel" parent="."]
+[node name="player_panel" type="Panel" parent="."]
 margin_left = 828.0
-margin_top = 1.0
-margin_right = 1022.0
-margin_bottom = 599.0
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="resource_subpanel" type="Panel" parent="player_panel"]
+margin_right = 196.0
+margin_bottom = 59.0
+
+[node name="slime_plort" type="Label" parent="player_panel/resource_subpanel"]
+margin_left = 38.0
+margin_top = 7.0
+margin_right = 78.0
+margin_bottom = 21.0
+text = "0"
+script = ExtResource( 1 )
