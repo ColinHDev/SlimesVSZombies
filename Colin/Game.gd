@@ -19,7 +19,7 @@ var minX = 400
 var maxX = 1200
 
 func spawnSlimes(number: int, maxSize: int, time: int) -> bool:
-	if (spawner != null):
+	if (spawner != null && spawner.hasFinished() == false):
 		return false;
 	spawner = load("res://Colin/Spawner.gd").new(number, maxSize, time)
 	return true
