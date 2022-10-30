@@ -124,13 +124,13 @@ margin_right = 200.0
 margin_bottom = 100.0
 
 [node name="ItemWand" type="Sprite" parent="enemy_panel/enemy_debuff"]
-position = Vector2( 105, 95 )
-scale = Vector2( 6.0625, 5.9375 )
+position = Vector2( 144, 133.196 )
+scale = Vector2( 8.5, 8.32474 )
 texture = ExtResource( 5 )
 
 [node name="Boss" type="Sprite" parent="enemy_panel/enemy_debuff"]
-position = Vector2( 108, 102 )
-scale = Vector2( 5.90625, 5.90625 )
+position = Vector2( 149, 144 )
+scale = Vector2( 6.85937, 6.85937 )
 texture = ExtResource( 6 )
 
 [node name="Slime" parent="." instance=ExtResource( 10 )]
