@@ -19,6 +19,10 @@ config/icon="res://icon.png"
 Game="*res://Colin/Game.gd"
 SlimePlort="*res://Colin/slime_plort.gd"
 
+[debug]
+
+settings/fps/force_fps=60
+
 [display]
 
 window/size/width=1600

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Illustration13.png-a3460a9c6b655423692a0bbd79d8b03d.stex"
+path="res://.import/boss-bg.png-0e71f5f71c05ff4868c2c3fd04c49105.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Lilly/Illustration13.png"
-dest_files=[ "res://.import/Illustration13.png-a3460a9c6b655423692a0bbd79d8b03d.stex" ]
+source_file="res://Marlon/Test1/boss-bg.png"
+dest_files=[ "res://.import/boss-bg.png-0e71f5f71c05ff4868c2c3fd04c49105.stex" ]
 
 [params]
 
