@@ -26,6 +26,9 @@ func _process(delta) -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if (position.y >= get_viewport_rect().end.y):
+		Game.player_lives -= 1
+		if Game.player_lives <= 0:
+			print("Game Over")
 		queue_free()
 		return
 	var collision: KinematicCollision2D = move_and_collide(Vector2(0.0, 1.0), true, true, true)
