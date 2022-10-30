@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Marlon/Schleim-Animiert2.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Marlon/Schleim-Animiert.tres" type="SpriteFrames" id=2]
 [ext_resource path="res://Marlon/Schleim-Animiert-hop.tres" type="SpriteFrames" id=3]
 [ext_resource path="res://Marlon/Test1/Plort.png" type="Texture" id=4]
-[ext_resource path="res://Marlon/Test1/Grabstein.png" type="Texture" id=5]
+[ext_resource path="res://Marlon/Grabstein-blinking.tres" type="SpriteFrames" id=5]
+[ext_resource path="res://Marlon/Grabstein-loading.tres" type="SpriteFrames" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -31,7 +32,12 @@ position = Vector2( 510, 59 )
 scale = Vector2( 3.59375, 3.59375 )
 texture = ExtResource( 4 )
 
-[node name="Grabstein" type="Sprite" parent="."]
-position = Vector2( 84, 821 )
-scale = Vector2( 3.40625, 3.40625 )
-texture = ExtResource( 5 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 181.75, 821.75 )
+scale = Vector2( 3.42188, 3.42188 )
+frames = ExtResource( 6 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 77, 823 )
+scale = Vector2( 3.42188, 3.42188 )
+frames = ExtResource( 5 )
