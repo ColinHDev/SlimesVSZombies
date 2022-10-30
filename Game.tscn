@@ -7,7 +7,11 @@
 [ext_resource path="res://Lasse/Item_Wand.png" type="Texture" id=5]
 [ext_resource path="res://Marlon/Test1/Boss.png" type="Texture" id=6]
 [ext_resource path="res://Arial.ttf" type="DynamicFontData" id=7]
+<<<<<<< HEAD
 [ext_resource path="res://Lilly/path.png" type="Texture" id=8]
+=======
+[ext_resource path="res://Marlon/Test1/Grabstein.png" type="Texture" id=8]
+>>>>>>> a0815fea5960e66eb7e25e77a5395d8c25f6891d
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -28,10 +32,9 @@ scale = Vector2( 1.36342, 1.51723 )
 texture = ExtResource( 8 )
 
 [node name="player_panel" type="Panel" parent="."]
-margin_left = 1302.0
-margin_top = 2.0
+margin_left = 1300.0
 margin_right = 1600.0
-margin_bottom = 896.0
+margin_bottom = 900.0
 
 [node name="ressource_subpanel" type="Panel" parent="player_panel"]
 margin_top = 1.0
@@ -94,13 +97,28 @@ margin_bottom = 617.0
 text = "create plort"
 
 [node name="enemy_panel" type="Panel" parent="."]
-margin_right = 298.0
-margin_bottom = 894.0
+margin_right = 300.0
+margin_bottom = 900.0
 
 [node name="graveyard" type="Panel" parent="enemy_panel"]
-margin_top = 400.0
-margin_right = 200.0
-margin_bottom = 600.0
+margin_top = 600.0
+margin_right = 300.0
+margin_bottom = 900.0
+
+[node name="Sprite" type="Sprite" parent="enemy_panel/graveyard"]
+position = Vector2( 76, 56 )
+scale = Vector2( 3.375, 3.375 )
+texture = ExtResource( 8 )
+
+[node name="Sprite2" type="Sprite" parent="enemy_panel/graveyard"]
+position = Vector2( 202, 113 )
+scale = Vector2( 3.375, 3.375 )
+texture = ExtResource( 8 )
+
+[node name="Sprite3" type="Sprite" parent="enemy_panel/graveyard"]
+position = Vector2( 79, 204 )
+scale = Vector2( 3.375, 3.375 )
+texture = ExtResource( 8 )
 
 [node name="enemy_debuff" type="Label" parent="enemy_panel"]
 margin_right = 200.0
