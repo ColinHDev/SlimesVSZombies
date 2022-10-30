@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
+[ext_resource path="res://assets/slime_wall_down.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://scripts/slime_plort.gd" type="Script" id=2]
 [ext_resource path="res://assets/Plort.png" type="Texture" id=3]
 [ext_resource path="res://assets/Trank_Rot.png" type="Texture" id=4]
@@ -8,7 +9,7 @@
 [ext_resource path="res://Arial.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://assets/Grabstein-1.png" type="Texture" id=8]
 [ext_resource path="res://scripts/potion_plort.gd" type="Script" id=9]
-[ext_resource path="res://scenes/Slime.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scripts/Game.gd" type="Script" id=10]
 [ext_resource path="res://assets/friedhof-bg.png" type="Texture" id=11]
 [ext_resource path="res://assets/path.png" type="Texture" id=12]
 [ext_resource path="res://scenes/debuff_label.tscn" type="PackedScene" id=14]
@@ -26,7 +27,8 @@ font_data = ExtResource( 7 )
 size = 30
 font_data = ExtResource( 7 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Game" type="Node2D"]
+script = ExtResource( 10 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -161,9 +163,6 @@ position = Vector2( 149, 144 )
 scale = Vector2( 6.85937, 6.85937 )
 texture = ExtResource( 6 )
 
-[node name="Slime" parent="." instance=ExtResource( 10 )]
-visible = false
-
 [node name="Node2D2" parent="." instance=ExtResource( 14 )]
 position = Vector2( 3, 204 )
 
@@ -177,4 +176,11 @@ margin_right = 1465.0
 margin_bottom = 817.0
 text = "Next wave"
 
+[node name="slime_wall" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 800, 420 )
+scale = Vector2( 1.9, 1.62206 )
+frames = ExtResource( 1 )
+
 [connection signal="pressed" from="player_panel/potion_button" to="player_panel/potion_subpanel/potion1" method="_on_potion_button_pressed"]
+[connection signal="animation_finished" from="slime_wall" to="." method="_on_slime_wall_animation_finished"]

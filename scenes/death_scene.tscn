@@ -1,15 +1,14 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Marlon/Test1/slime_wall_down.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Marlon/Test1/Deathscreen/Schleim10.png" type="Texture" id=1]
 [ext_resource path="res://Marlon/Test1/game_over_blinking.tres" type="SpriteFrames" id=2]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="SChleimwand2" type="AnimatedSprite" parent="."]
+[node name="background" type="Sprite" parent="."]
 position = Vector2( 800, 420 )
-scale = Vector2( 1.9, 1.62206 )
-frames = ExtResource( 1 )
-frame = 9
+scale = Vector2( 1.9, 1.622 )
+texture = ExtResource( 1 )
 
 [node name="Game_over_blink" type="AnimatedSprite" parent="."]
 position = Vector2( 815, 436 )

@@ -25,9 +25,7 @@ func _process(delta) -> void:
 func _physics_process(delta):
 	var height: int = $AnimatedSprite.frames.get_frame($AnimatedSprite.animation, $AnimatedSprite.frame).get_height()
 	if (position.y - (height * $AnimatedSprite.scale.x) / 2 >= get_viewport_rect().end.y):
-		Game.player_lives -= 1
-		if Game.player_lives <= 0:
-			print("Game Over")
+		get_parent().reduceLive()
 		queue_free()
 		return
 	position.y += 1
@@ -38,8 +36,8 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 
 func split() -> void:
 	if (size > 1):
-		Game.spawnSlime(size - 1, max(position.x - 100, Game.minX), position.y)
-		Game.spawnSlime(size - 1, min(position.x + 100, Game.maxX), position.y)
+		get_parent().spawnSlime(size - 1, max(position.x - 100, GlobalData.minX), position.y)
+		get_parent().spawnSlime(size - 1, min(position.x + 100, GlobalData.maxX), position.y)
 	else:
-		Game.plort_count += 1
+		GlobalData.plort_count += 1
 	queue_free()

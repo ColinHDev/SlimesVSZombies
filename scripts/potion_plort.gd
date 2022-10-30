@@ -15,7 +15,7 @@ func _ready():
 	
 func _process(delta):
 	text = String(text.to_int() + 1)
-	text = String(Game.potion_count)
+	text = String(GlobalData.potion_count)
 	
 	if running:
 		counter -= 1
@@ -31,9 +31,9 @@ func _process(delta):
 		duration = 5
 		durlbl.text = "0:0" + String(duration)
 		running = false
-		Game.potion_count += 1
+		GlobalData.potion_count += 1
 
 func _on_potion_button_pressed():
-	if !running and Game.plort_count >= 5:
+	if !running and GlobalData.plort_count >= 5:
 		running = true
-		Game.plort_count -= 5
+		GlobalData.plort_count -= 5

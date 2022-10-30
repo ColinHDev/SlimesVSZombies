@@ -9,13 +9,14 @@
 [ext_resource path="res://Lilly/path.png" type="Texture" id=7]
 [ext_resource path="res://Marlon/Test1/friedhof-bg.png" type="Texture" id=8]
 [ext_resource path="res://Lasse/VerbündeterAnimation/verbündeter.tres" type="SpriteFrames" id=9]
-[ext_resource path="res://Marlon/Test1/slime_wall_down.tres" type="SpriteFrames" id=10]
+[ext_resource path="res://assets/slime_wall_down.tres" type="SpriteFrames" id=10]
 [ext_resource path="res://Marlon/play-button-blinking.tres" type="SpriteFrames" id=11]
 [ext_resource path="res://Lasse/Purple_Slime/lila_hop.tres" type="SpriteFrames" id=12]
 [ext_resource path="res://Lasse/Orange_Slime/orange_hop.tres" type="SpriteFrames" id=13]
 [ext_resource path="res://Lasse/verwandlung.tres" type="SpriteFrames" id=14]
 [ext_resource path="res://Marlon/Test1/game_over_blinking.tres" type="SpriteFrames" id=15]
 [ext_resource path="res://Marlon/Test1/slime_wall_up.tres" type="SpriteFrames" id=16]
+
 
 [node name="Node2D" type="Node2D"]
 

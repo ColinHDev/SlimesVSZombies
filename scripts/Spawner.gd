@@ -55,4 +55,4 @@ func getRandomSize() -> int:
 	return rng.randi_range(1, maxSize)
 
 func getRandomX() -> int:
-	return rng.randi_range(Game.minX, Game.maxX)
+	return rng.randi_range(GlobalData.minX, GlobalData.maxX)

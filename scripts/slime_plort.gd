@@ -5,4 +5,4 @@ func _ready():
 	
 func _process(delta):
 	text = String(text.to_int() + 1)
-	text = String(Game.plort_count)
+	text = String(GlobalData.plort_count)
