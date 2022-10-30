@@ -44,6 +44,8 @@ func split() -> void:
 		print(slimeInstance1.position.x)
 		print(slimeInstance2.position.x)
 		
+		
+		
 		Game.add_child(slimeInstance1)
 		Game.add_child(slimeInstance2)
 	queue_free()

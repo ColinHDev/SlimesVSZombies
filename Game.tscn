@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://ui.gd" type="Script" id=1]
 [ext_resource path="res://slime_plort.gd" type="Script" id=2]
 [ext_resource path="res://Marlon/Test1/Plort.png" type="Texture" id=3]
 [ext_resource path="res://Lasse/Trank_Rot.png" type="Texture" id=4]
+[ext_resource path="res://Lasse/Item_Wand.png" type="Texture" id=5]
+[ext_resource path="res://Marlon/Test1/Boss.png" type="Texture" id=6]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -14,9 +16,8 @@ margin_right = 1025.0
 margin_bottom = 600.0
 
 [node name="ressource_subpanel" type="Panel" parent="player_panel"]
-margin_left = 1.0
 margin_top = 1.0
-margin_right = 199.0
+margin_right = 198.0
 margin_bottom = 119.0
 
 [node name="slime_plort" type="Label" parent="player_panel/ressource_subpanel"]
@@ -32,10 +33,10 @@ position = Vector2( 27, 39 )
 texture = ExtResource( 3 )
 
 [node name="potion_subpanel" type="Panel" parent="player_panel"]
-margin_left = 1.0
-margin_top = 111.0
-margin_right = 200.0
-margin_bottom = 219.0
+margin_left = 2.0
+margin_top = 106.0
+margin_right = 201.0
+margin_bottom = 214.0
 
 [node name="potion1" type="Label" parent="player_panel/potion_subpanel"]
 margin_left = 42.0
@@ -55,12 +56,43 @@ margin_right = 161.0
 margin_bottom = 512.0
 text = "Brew Potion"
 
+[node name="Sprite" type="Sprite" parent="player_panel/potion_button"]
+position = Vector2( 67, 62 )
+scale = Vector2( 3.8125, 3.8125 )
+texture = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="player_panel/potion_button/Sprite"]
+texture = ExtResource( 4 )
+
 [node name="plort_button" type="Button" parent="player_panel"]
 margin_left = 23.0
 margin_top = 253.0
 margin_right = 176.0
 margin_bottom = 350.0
 text = "create plort"
+
+[node name="enemy_panel" type="Panel" parent="."]
+margin_right = 200.0
+margin_bottom = 600.0
+
+[node name="graveyard" type="Panel" parent="enemy_panel"]
+margin_top = 400.0
+margin_right = 200.0
+margin_bottom = 600.0
+
+[node name="enemy_debuff" type="Label" parent="enemy_panel"]
+margin_right = 200.0
+margin_bottom = 100.0
+
+[node name="ItemWand" type="Sprite" parent="enemy_panel/enemy_debuff"]
+position = Vector2( 100, 79 )
+scale = Vector2( 6.0625, 5.9375 )
+texture = ExtResource( 5 )
+
+[node name="Boss" type="Sprite" parent="enemy_panel/enemy_debuff"]
+position = Vector2( 107, 90 )
+scale = Vector2( 5.90625, 5.90625 )
+texture = ExtResource( 6 )
 
 [connection signal="pressed" from="player_panel/potion_button" to="." method="_on_potion_button_pressed"]
 [connection signal="pressed" from="player_panel/plort_button" to="player_panel/ressource_subpanel/slime_plort" method="_on_plort_button_pressed"]
