@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
-var size = 1
+var size: int
+var speed: float
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,7 +29,7 @@ func _physics_process(delta):
 		get_parent().reduceLive()
 		queue_free()
 		return
-	position.y += 1
+	position.y += speed
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
@@ -36,8 +37,8 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 
 func split() -> void:
 	if (size > 1):
-		get_parent().spawnSlime(size - 1, max(position.x - 100, GlobalData.minX), position.y)
-		get_parent().spawnSlime(size - 1, min(position.x + 100, GlobalData.maxX), position.y)
+		get_parent().spawnSlime(size - 1, speed, max(position.x - 100, GlobalData.minX), position.y)
+		get_parent().spawnSlime(size - 1, speed, min(position.x + 100, GlobalData.maxX), position.y)
 	else:
 		GlobalData.plort_count += 1
 	queue_free()

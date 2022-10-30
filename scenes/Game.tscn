@@ -169,7 +169,7 @@ position = Vector2( 3, 204 )
 [node name="Node2D3" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1300, 246 )
 
-[node name="Button" type="Button" parent="."]
+[node name="next_wave_button" type="Button" parent="."]
 margin_left = 1306.0
 margin_top = 700.0
 margin_right = 1465.0
@@ -183,4 +183,5 @@ scale = Vector2( 1.9, 1.62206 )
 frames = ExtResource( 1 )
 
 [connection signal="pressed" from="player_panel/potion_button" to="player_panel/potion_subpanel/potion1" method="_on_potion_button_pressed"]
+[connection signal="pressed" from="next_wave_button" to="." method="_on_next_wave_button_pressed"]
 [connection signal="animation_finished" from="slime_wall" to="." method="_on_slime_wall_animation_finished"]

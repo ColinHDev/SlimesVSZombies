@@ -2,15 +2,17 @@ extends Node
 
 var number: int
 var maxSize: int
+var maxSpeed: float
 var time: int
 var startTime: int
 var lastSpawn: int = 0
 var rng: RandomNumberGenerator
 
 
-func _init(numberOfSlimes: int, slimeMaxSize: int, timeToSpawn: int):
+func _init(numberOfSlimes: int, slimeMaxSize: int, slimeMaxSpeed: float, timeToSpawn: int):
 	number = numberOfSlimes
 	maxSize = slimeMaxSize
+	maxSpeed = slimeMaxSpeed
 	time = timeToSpawn
 	startTime = OS.get_system_time_secs()
 	rng = RandomNumberGenerator.new()
@@ -53,6 +55,9 @@ func getAmountToSpawn() -> int:
 
 func getRandomSize() -> int:
 	return rng.randi_range(1, maxSize)
+
+func getRandomSpeed() -> float:
+	return rng.randf_range(0.5, maxSpeed)
 
 func getRandomX() -> int:
 	return rng.randi_range(GlobalData.minX, GlobalData.maxX)
