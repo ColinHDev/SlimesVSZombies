@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Marlon/Schleim-Animiert2.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Marlon/Schleim-Animiert.tres" type="SpriteFrames" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://Lilly/Illustration13.png" type="Texture" id=9]
 [ext_resource path="res://Marlon/Test1/Menu.png" type="Texture" id=10]
 [ext_resource path="res://Marlon/play-button-blinking.tres" type="SpriteFrames" id=11]
+[ext_resource path="res://Lasse/Purple_Slime/lila_hop.tres" type="SpriteFrames" id=12]
+[ext_resource path="res://Lasse/Orange_Slime/orange_hop.tres" type="SpriteFrames" id=13]
+[ext_resource path="res://Lasse/verwandlung.tres" type="SpriteFrames" id=14]
 
 [node name="Node2D" type="Node2D"]
 
@@ -52,6 +55,18 @@ scale = Vector2( 9.5625, 7.6875 )
 frames = ExtResource( 3 )
 frame = 3
 
+[node name="Orange-Hop" type="AnimatedSprite" parent="."]
+position = Vector2( 259, 178 )
+scale = Vector2( 9.5625, 7.6875 )
+frames = ExtResource( 13 )
+frame = 1
+
+[node name="Lila-Hop" type="AnimatedSprite" parent="."]
+position = Vector2( 412, 183 )
+scale = Vector2( 9.5625, 7.6875 )
+frames = ExtResource( 12 )
+frame = 1
+
 [node name="Plort" type="Sprite" parent="."]
 position = Vector2( 510, 59 )
 scale = Vector2( 3.59375, 3.59375 )
@@ -61,7 +76,7 @@ texture = ExtResource( 4 )
 position = Vector2( 291, 744 )
 scale = Vector2( 3.42188, 3.42188 )
 frames = ExtResource( 6 )
-frame = 9
+frame = 2
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 96, 747 )
@@ -72,3 +87,9 @@ frames = ExtResource( 5 )
 position = Vector2( 1659.88, 447.737 )
 scale = Vector2( 1.06261, 1.06261 )
 texture = ExtResource( 9 )
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="."]
+position = Vector2( 288, 310 )
+frames = ExtResource( 14 )
+frame = 155
+playing = true
