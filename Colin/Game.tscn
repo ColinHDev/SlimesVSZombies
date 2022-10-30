@@ -125,5 +125,5 @@ position = Vector2( 107, 90 )
 scale = Vector2( 5.90625, 5.90625 )
 texture = ExtResource( 6 )
 
-[connection signal="pressed" from="player_panel/potion_button" to="." method="_on_potion_button_pressed"]
+[connection signal="pressed" from="player_panel/potion_button" to="player_panel/potion_subpanel/potion1" method="_on_potion_button_pressed"]
 [connection signal="pressed" from="player_panel/plort_button" to="player_panel/ressource_subpanel/slime_plort" method="_on_plort_button_pressed"]
