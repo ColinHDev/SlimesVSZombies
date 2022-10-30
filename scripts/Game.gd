@@ -1,10 +1,5 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 onready var Slime = preload("res://scenes/Slime.tscn")
 
 func _ready():
@@ -37,7 +32,6 @@ func spawnSlime(size: int, x: float, y: float) -> void:
 
 var spawner = null
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if spawner != null:
 		var toSpawn: int = spawner.getAmountToSpawn()

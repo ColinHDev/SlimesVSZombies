@@ -11,7 +11,6 @@
 [ext_resource path="res://scenes/Slime.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/friedhof-bg.png" type="Texture" id=11]
 [ext_resource path="res://assets/path.png" type="Texture" id=12]
-[ext_resource path="res://scenes/progress_bar.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/debuff_label.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/shop.tscn" type="PackedScene" id=15]
 
@@ -21,6 +20,10 @@ font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 40
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
 font_data = ExtResource( 7 )
 
 [node name="Node2D" type="Node2D"]
@@ -62,6 +65,13 @@ margin_top = 106.0
 margin_right = 201.0
 margin_bottom = 214.0
 
+[node name="progress_bar" type="ColorRect" parent="player_panel/potion_subpanel"]
+margin_left = 78.0
+margin_top = 20.0
+margin_right = 278.0
+margin_bottom = 70.0
+color = Color( 0.137255, 0.137255, 0.137255, 1 )
+
 [node name="potion1" type="Label" parent="player_panel/potion_subpanel"]
 margin_left = 42.0
 margin_top = 22.0
@@ -75,6 +85,23 @@ script = ExtResource( 9 )
 position = Vector2( 19, 46 )
 scale = Vector2( 1.9375, 1.9375 )
 texture = ExtResource( 4 )
+
+[node name="progress_bar_progress" type="ColorRect" parent="player_panel/potion_subpanel"]
+margin_left = 88.0
+margin_top = 25.0
+margin_right = 88.0
+margin_bottom = 105.0
+color = Color( 0.878431, 0.027451, 0.027451, 1 )
+
+[node name="duration_label" type="Label" parent="player_panel/potion_subpanel"]
+margin_left = 78.0
+margin_top = 20.0
+margin_right = 278.0
+margin_bottom = 77.0
+custom_fonts/font = SubResource( 3 )
+text = "0:05"
+align = 1
+valign = 1
 
 [node name="potion_button" type="Button" parent="player_panel"]
 margin_left = 169.0
@@ -137,9 +164,6 @@ texture = ExtResource( 6 )
 [node name="Slime" parent="." instance=ExtResource( 10 )]
 visible = false
 
-[node name="Node2D" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1380, 126 )
-
 [node name="Node2D2" parent="." instance=ExtResource( 14 )]
 position = Vector2( 3, 204 )
 
@@ -152,3 +176,5 @@ margin_top = 700.0
 margin_right = 1465.0
 margin_bottom = 817.0
 text = "Next wave"
+
+[connection signal="pressed" from="player_panel/potion_button" to="player_panel/potion_subpanel/potion1" method="_on_potion_button_pressed"]
