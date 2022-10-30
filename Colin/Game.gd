@@ -8,7 +8,7 @@ extends Node2D
 onready var Slime = preload("res://Colin/Slime.tscn")
 
 func _ready():
-	spawnSlimes(10, 2, 40)
+	spawnSlimes(1500, 3, 600)
 
 var plort_count = 0
 var potion_count = 0

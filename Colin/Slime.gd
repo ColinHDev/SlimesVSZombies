@@ -31,9 +31,10 @@ func _physics_process(delta):
 			print("Game Over")
 		queue_free()
 		return
-	var collision: KinematicCollision2D = move_and_collide(Vector2(0.0, 1.0), true, true, true)
+	position.y += 1
+	"""var collision: KinematicCollision2D = move_and_collide(Vector2(0.0, 1.0), true, true, true)
 	if collision == null || collision.collider_id < get_instance_id():
-		position.y += 1
+		position.y += 1"""
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
