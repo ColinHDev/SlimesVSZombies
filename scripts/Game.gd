@@ -23,6 +23,8 @@ func spawnSlimes(number: int, maxSize: int, time: int) -> bool:
 	return true
 
 # Spawns a slime with the given size at the given coordinates
+# If a negative y coordinate is given, then a position according to the sprite 
+# size above the camera's reach is chosen so that the slime walks into the screen
 func spawnSlime(size: int, x: float, y: float) -> void:
 	var slimeInstance = Slime.instance()
 	slimeInstance.size = size
@@ -36,5 +38,5 @@ func _process(delta):
 	if spawner != null:
 		var toSpawn: int = spawner.getAmountToSpawn()
 		while toSpawn > 0:
-			spawnSlime(spawner.getRandomSize(), spawner.getRandomX(), 100.0)
+			spawnSlime(spawner.getRandomSize(), spawner.getRandomX(), -1)
 			toSpawn -= 1

@@ -1,16 +1,15 @@
 extends KinematicBody2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-export var size = 2
+var size = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimatedSprite.scale.x = size * 4
 	$AnimatedSprite.scale.y = size * 4
+	
+	if position.y < 0:
+		var height: int = $AnimatedSprite.frames.get_frame($AnimatedSprite.animation, $AnimatedSprite.frame).get_height()
+		position.y = 0 - (height * $AnimatedSprite.scale.x) / 2
 
 func _process(delta) -> void:
 	for i in range(0, $AnimatedSprite.frames.get_frame_count($AnimatedSprite.animation)):
@@ -24,7 +23,8 @@ func _process(delta) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	if (position.y >= get_viewport_rect().end.y):
+	var height: int = $AnimatedSprite.frames.get_frame($AnimatedSprite.animation, $AnimatedSprite.frame).get_height()
+	if (position.y - (height * $AnimatedSprite.scale.x) / 2 >= get_viewport_rect().end.y):
 		Game.player_lives -= 1
 		if Game.player_lives <= 0:
 			print("Game Over")
