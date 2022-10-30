@@ -38,16 +38,8 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 
 func split() -> void:
 	if (size > 1):
-		var slimeInstance1 = Game.Slime.instance()
-		slimeInstance1.size = size - 1;
-		slimeInstance1.position.y = position.y
-		var slimeInstance2 = slimeInstance1.duplicate()
-		
-		slimeInstance1.position.x = max(position.x - 100, Game.minX)
-		slimeInstance2.position.x = min(position.x + 100, Game.maxX)
-		
-		Game.add_child(slimeInstance1)
-		Game.add_child(slimeInstance2)
+		Game.spawnSlime(size - 1, max(position.x - 100, Game.minX), position.y)
+		Game.spawnSlime(size - 1, min(position.x + 100, Game.maxX), position.y)
 	else:
 		Game.plort_count += 1
 	queue_free()
