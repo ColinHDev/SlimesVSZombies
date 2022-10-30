@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Marlon/Schleim-Animiert2.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Marlon/Schleim-Animiert.tres" type="SpriteFrames" id=2]
@@ -8,8 +8,7 @@
 [ext_resource path="res://Marlon/Grabstein-loading.tres" type="SpriteFrames" id=6]
 [ext_resource path="res://Lilly/path.png" type="Texture" id=7]
 [ext_resource path="res://Marlon/Test1/friedhof-bg.png" type="Texture" id=8]
-[ext_resource path="res://Lilly/Illustration13.png" type="Texture" id=9]
-[ext_resource path="res://Marlon/Test1/Menu.png" type="Texture" id=10]
+[ext_resource path="res://Lasse/VerbündeterAnimation/verbündeter.tres" type="SpriteFrames" id=9]
 [ext_resource path="res://Marlon/play-button-blinking.tres" type="SpriteFrames" id=11]
 [ext_resource path="res://Lasse/Purple_Slime/lila_hop.tres" type="SpriteFrames" id=12]
 [ext_resource path="res://Lasse/Orange_Slime/orange_hop.tres" type="SpriteFrames" id=13]
@@ -17,17 +16,12 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Menu" type="Sprite" parent="."]
-visible = false
-position = Vector2( 943, 533 )
-texture = ExtResource( 10 )
-
 [node name="Path" type="Sprite" parent="."]
 position = Vector2( 832, 450 )
 scale = Vector2( 1.5084, 1.5084 )
 texture = ExtResource( 7 )
 
-[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+[node name="Play-Button" type="AnimatedSprite" parent="."]
 position = Vector2( 798.222, 449 )
 scale = Vector2( 0.831482, 0.831481 )
 frames = ExtResource( 11 )
@@ -72,24 +66,27 @@ position = Vector2( 510, 59 )
 scale = Vector2( 3.59375, 3.59375 )
 texture = ExtResource( 4 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="Grabstein-Aufladen" type="AnimatedSprite" parent="."]
 position = Vector2( 291, 744 )
 scale = Vector2( 3.42188, 3.42188 )
 frames = ExtResource( 6 )
 frame = 2
 
-[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+[node name="Grabstein-Blink" type="AnimatedSprite" parent="."]
 position = Vector2( 96, 747 )
 scale = Vector2( 3.42188, 3.42188 )
 frames = ExtResource( 5 )
 
-[node name="Illustration13" type="Sprite" parent="."]
-position = Vector2( 1659.88, 447.737 )
-scale = Vector2( 1.06261, 1.06261 )
-texture = ExtResource( 9 )
+[node name="Verbündeter" type="AnimatedSprite" parent="."]
+position = Vector2( 530.5, 763.5 )
+scale = Vector2( 4.28125, 4.28125 )
+frames = ExtResource( 9 )
+frame = 7
+playing = true
 
-[node name="AnimatedSprite4" type="AnimatedSprite" parent="."]
-position = Vector2( 288, 310 )
+[node name="Transformation" type="AnimatedSprite" parent="."]
+position = Vector2( 542, 749 )
+scale = Vector2( 4.79688, 4.79688 )
 frames = ExtResource( 14 )
 frame = 155
 playing = true
