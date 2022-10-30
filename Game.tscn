@@ -27,7 +27,7 @@ margin_bottom = 51.0
 text = "0"
 script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="player_panel/ressource_subpanel"]
+[node name="Plort_Sprite" type="Sprite" parent="player_panel/ressource_subpanel"]
 position = Vector2( 27, 39 )
 texture = ExtResource( 3 )
 
@@ -44,7 +44,7 @@ margin_right = 129.0
 margin_bottom = 36.0
 text = "0"
 
-[node name="TrankRot" type="Sprite" parent="player_panel/potion_subpanel"]
+[node name="TrankRot_Sprite" type="Sprite" parent="player_panel/potion_subpanel"]
 position = Vector2( 29, 27 )
 texture = ExtResource( 4 )
 
