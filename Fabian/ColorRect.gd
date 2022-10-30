@@ -29,3 +29,5 @@ func _process(delta):
 		duration = 5
 		durlbl.text = "0:0" + String(duration)
 		running = false
+		Game.potion_count += 1
+		print(Game.potion_count)

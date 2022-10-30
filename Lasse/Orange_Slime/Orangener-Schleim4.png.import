@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Grabstein-final.png-d62c7a7dd62e88dc5b23e9b62c31a514.stex"
+path="res://.import/Orangener-Schleim4.png-c546b26ab3349ac13231f022971e26a2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Marlon/Test1/Grabstein-final.png"
-dest_files=[ "res://.import/Grabstein-final.png-d62c7a7dd62e88dc5b23e9b62c31a514.stex" ]
+source_file="res://Lasse/Orange_Slime/Orangener-Schleim4.png"
+dest_files=[ "res://.import/Orangener-Schleim4.png-c546b26ab3349ac13231f022971e26a2.stex" ]
 
 [params]
 
