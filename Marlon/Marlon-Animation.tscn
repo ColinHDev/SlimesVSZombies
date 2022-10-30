@@ -84,7 +84,7 @@ frames = ExtResource( 5 )
 position = Vector2( 530.5, 763.5 )
 scale = Vector2( 4.28125, 4.28125 )
 frames = ExtResource( 9 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="Transformation" type="AnimatedSprite" parent="."]
@@ -95,6 +95,7 @@ frame = 155
 playing = true
 
 [node name="SChleimwand" type="AnimatedSprite" parent="."]
+visible = false
 position = Vector2( 804, 420 )
 scale = Vector2( 1.9, 1.62206 )
 frames = ExtResource( 16 )
@@ -102,12 +103,10 @@ frame = 9
 flip_v = true
 
 [node name="SChleimwand2" type="AnimatedSprite" parent="."]
-visible = false
 position = Vector2( 804, 420 )
 scale = Vector2( 1.9, 1.62206 )
 frames = ExtResource( 10 )
 frame = 9
-playing = true
 
 [node name="Game_over_blink" type="AnimatedSprite" parent="."]
 visible = false
