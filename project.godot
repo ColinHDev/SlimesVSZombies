@@ -12,10 +12,12 @@ config_version=4
 
 config/name="Slimes vs Zombies"
 run/main_scene="res://Colin/Game.tscn"
+config/icon="res://icon.png"
 
 [autoload]
 
 Game="*res://scripts/Game.gd"
+SlimePlort="*res://Colin/slime_plort.gd"
 
 [debug]
 

@@ -23,6 +23,7 @@ centered = false
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Sprite"]
 position = Vector2( 960, 540 )
 frames = ExtResource( 2 )
+frame = 1
 playing = true
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

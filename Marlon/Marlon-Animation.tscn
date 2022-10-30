@@ -39,30 +39,35 @@ texture = ExtResource( 8 )
 position = Vector2( 74.5, 60.5 )
 scale = Vector2( 9.5625, 7.6875 )
 frames = ExtResource( 2 )
-frame = 7
+frame = 3
+playing = true
 
 [node name="Slime-Idle" type="AnimatedSprite" parent="."]
 position = Vector2( 246, 62 )
 scale = Vector2( 9.5625, 7.6875 )
 frames = ExtResource( 1 )
-frame = 1
+frame = 2
+playing = true
 
 [node name="Slime-Hop" type="AnimatedSprite" parent="."]
 position = Vector2( 405, 61 )
 scale = Vector2( 9.5625, 7.6875 )
 frames = ExtResource( 3 )
 frame = 1
+playing = true
 
 [node name="Orange-Hop" type="AnimatedSprite" parent="."]
 position = Vector2( 259, 178 )
 scale = Vector2( 9.5625, 7.6875 )
 frames = ExtResource( 13 )
-frame = 1
+frame = 3
+playing = true
 
 [node name="Lila-Hop" type="AnimatedSprite" parent="."]
 position = Vector2( 412, 183 )
 scale = Vector2( 9.5625, 7.6875 )
 frames = ExtResource( 12 )
+playing = true
 
 [node name="Plort" type="Sprite" parent="."]
 position = Vector2( 510, 59 )
@@ -73,21 +78,24 @@ texture = ExtResource( 4 )
 position = Vector2( 291, 744 )
 scale = Vector2( 3.42188, 3.42188 )
 frames = ExtResource( 6 )
+frame = 8
+playing = true
 
 [node name="Grabstein-Blink" type="AnimatedSprite" parent="."]
 position = Vector2( 96, 747 )
 scale = Vector2( 3.42188, 3.42188 )
 frames = ExtResource( 5 )
+playing = true
 
 [node name="Verbündeter" type="AnimatedSprite" parent="."]
-position = Vector2( 530.5, 763.5 )
+position = Vector2( 510, 739 )
 scale = Vector2( 4.28125, 4.28125 )
 frames = ExtResource( 9 )
-frame = 9
+frame = 8
 playing = true
 
 [node name="Transformation" type="AnimatedSprite" parent="."]
-position = Vector2( 542, 749 )
+position = Vector2( 780, 740 )
 scale = Vector2( 4.79688, 4.79688 )
 frames = ExtResource( 14 )
 frame = 155
@@ -106,10 +114,10 @@ visible = false
 position = Vector2( 804, 420 )
 scale = Vector2( 1.9, 1.62206 )
 frames = ExtResource( 10 )
-frame = 9
+frame = 4
 
 [node name="Game_over_blink" type="AnimatedSprite" parent="."]
-visible = false
-position = Vector2( 815, 436 )
+position = Vector2( 1077, 388 )
 scale = Vector2( 19.472, 16.6235 )
 frames = ExtResource( 15 )
+playing = true
