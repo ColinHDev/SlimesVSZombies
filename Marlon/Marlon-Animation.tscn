@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Marlon/Schleim-Animiert2.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Marlon/Schleim-Animiert.tres" type="SpriteFrames" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Marlon/Test1/friedhof-bg.png" type="Texture" id=8]
 [ext_resource path="res://Lilly/Illustration13.png" type="Texture" id=9]
 [ext_resource path="res://Marlon/Test1/Menu.png" type="Texture" id=10]
+[ext_resource path="res://Marlon/play-button-blinking.tres" type="SpriteFrames" id=11]
 
 [node name="Node2D" type="Node2D"]
 
@@ -22,6 +23,11 @@ texture = ExtResource( 10 )
 position = Vector2( 832, 450 )
 scale = Vector2( 1.5084, 1.5084 )
 texture = ExtResource( 7 )
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 798.222, 449 )
+scale = Vector2( 0.831482, 0.831481 )
+frames = ExtResource( 11 )
 
 [node name="Friedhof-bg" type="Sprite" parent="."]
 position = Vector2( 208, 680.2 )
@@ -55,13 +61,12 @@ texture = ExtResource( 4 )
 position = Vector2( 291, 744 )
 scale = Vector2( 3.42188, 3.42188 )
 frames = ExtResource( 6 )
-frame = 2
+frame = 9
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 96, 747 )
 scale = Vector2( 3.42188, 3.42188 )
 frames = ExtResource( 5 )
-frame = 1
 
 [node name="Illustration13" type="Sprite" parent="."]
 position = Vector2( 1659.88, 447.737 )
