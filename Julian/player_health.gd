@@ -1,4 +1,4 @@
-extends Button
+extends Label
 
 
 # Declare member variables here. Examples:
@@ -13,6 +13,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if(pressed):
-		text = "as"
-	pass
+		text = String(Game.player_lives)
+#	pass
