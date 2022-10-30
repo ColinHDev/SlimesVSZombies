@@ -18,6 +18,9 @@ var player_lives = 3
 var minX = 400
 var maxX = 1200
 
+# Adds a spawner to this class, which spawns the given amount of slimes evenly distributed
+# across the given time. The slimes have a random size between 1 and the given maxSize
+# Returns false if another previously added spawner is still running, otherwise true
 func spawnSlimes(number: int, maxSize: int, time: int) -> bool:
 	if (spawner != null && spawner.hasFinished() == false):
 		return false;
