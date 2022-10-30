@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Play.png-6c190f94eded8f6a668bcf021d49d2ce.stex"
+path="res://.import/gunItem.png-0a278cbdcf41b430bcf2cb60b0419e07.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Play.png"
-dest_files=[ "res://.import/Play.png-6c190f94eded8f6a668bcf021d49d2ce.stex" ]
+source_file="res://assets/gunItem.png"
+dest_files=[ "res://.import/gunItem.png-0a278cbdcf41b430bcf2cb60b0419e07.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

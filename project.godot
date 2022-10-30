@@ -15,8 +15,7 @@ run/main_scene="res://Colin/Game.tscn"
 
 [autoload]
 
-Game="*res://Colin/Game.gd"
-SlimePlort="*res://Colin/slime_plort.gd"
+Game="*res://scripts/Game.gd"
 
 [debug]
 
