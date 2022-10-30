@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://ui.gd" type="Script" id=1]
 [ext_resource path="res://slime_plort.gd" type="Script" id=2]
@@ -6,6 +6,15 @@
 [ext_resource path="res://Lasse/Trank_Rot.png" type="Texture" id=4]
 [ext_resource path="res://Lasse/Item_Wand.png" type="Texture" id=5]
 [ext_resource path="res://Marlon/Test1/Boss.png" type="Texture" id=6]
+[ext_resource path="res://Arial.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 7 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -22,15 +31,17 @@ margin_right = 198.0
 margin_bottom = 119.0
 
 [node name="slime_plort" type="Label" parent="player_panel/ressource_subpanel"]
-margin_left = 42.0
-margin_top = 33.0
-margin_right = 156.0
-margin_bottom = 51.0
+margin_left = 49.0
+margin_top = 24.0
+margin_right = 274.0
+margin_bottom = 87.0
+custom_fonts/font = SubResource( 1 )
 text = "0"
 script = ExtResource( 2 )
 
 [node name="Plort_Sprite" type="Sprite" parent="player_panel/ressource_subpanel"]
-position = Vector2( 27, 39 )
+position = Vector2( 18.5, 47.5 )
+scale = Vector2( 2.0625, 2.0625 )
 texture = ExtResource( 3 )
 
 [node name="potion_subpanel" type="Panel" parent="player_panel"]
@@ -42,12 +53,14 @@ margin_bottom = 214.0
 [node name="potion1" type="Label" parent="player_panel/potion_subpanel"]
 margin_left = 42.0
 margin_top = 22.0
-margin_right = 129.0
-margin_bottom = 36.0
+margin_right = 262.0
+margin_bottom = 89.0
+custom_fonts/font = SubResource( 2 )
 text = "0"
 
 [node name="TrankRot_Sprite" type="Sprite" parent="player_panel/potion_subpanel"]
-position = Vector2( 29, 27 )
+position = Vector2( 19, 46 )
+scale = Vector2( 1.9375, 1.9375 )
 texture = ExtResource( 4 )
 
 [node name="potion_button" type="Button" parent="player_panel"]
