@@ -90,13 +90,6 @@ texture = ExtResource( 5 )
 [node name="Sprite" type="Sprite" parent="player_panel/potion_button/Sprite"]
 texture = ExtResource( 4 )
 
-[node name="plort_button" type="Button" parent="player_panel"]
-margin_left = 72.0
-margin_top = 520.0
-margin_right = 225.0
-margin_bottom = 617.0
-text = "create plort"
-
 [node name="enemy_panel" type="Panel" parent="."]
 margin_right = 300.0
 margin_bottom = 900.0
@@ -144,4 +137,3 @@ texture = ExtResource( 6 )
 visible = false
 
 [connection signal="pressed" from="player_panel/potion_button" to="player_panel/potion_subpanel/potion1" method="_on_potion_button_pressed"]
-[connection signal="pressed" from="player_panel/plort_button" to="player_panel/ressource_subpanel/slime_plort" method="_on_plort_button_pressed"]
