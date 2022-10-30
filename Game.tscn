@@ -11,9 +11,10 @@
 script = ExtResource( 1 )
 
 [node name="player_panel" type="Panel" parent="."]
-margin_left = 825.0
-margin_right = 1025.0
-margin_bottom = 600.0
+margin_left = 1302.0
+margin_top = 2.0
+margin_right = 1600.0
+margin_bottom = 896.0
 
 [node name="ressource_subpanel" type="Panel" parent="player_panel"]
 margin_top = 1.0
@@ -50,10 +51,10 @@ position = Vector2( 29, 27 )
 texture = ExtResource( 4 )
 
 [node name="potion_button" type="Button" parent="player_panel"]
-margin_left = 32.0
-margin_top = 384.0
-margin_right = 161.0
-margin_bottom = 512.0
+margin_left = 88.0
+margin_top = 692.0
+margin_right = 217.0
+margin_bottom = 820.0
 text = "Brew Potion"
 
 [node name="Sprite" type="Sprite" parent="player_panel/potion_button"]
@@ -65,15 +66,15 @@ texture = ExtResource( 5 )
 texture = ExtResource( 4 )
 
 [node name="plort_button" type="Button" parent="player_panel"]
-margin_left = 23.0
-margin_top = 253.0
-margin_right = 176.0
-margin_bottom = 350.0
+margin_left = 72.0
+margin_top = 520.0
+margin_right = 225.0
+margin_bottom = 617.0
 text = "create plort"
 
 [node name="enemy_panel" type="Panel" parent="."]
-margin_right = 200.0
-margin_bottom = 600.0
+margin_right = 298.0
+margin_bottom = 894.0
 
 [node name="graveyard" type="Panel" parent="enemy_panel"]
 margin_top = 400.0
