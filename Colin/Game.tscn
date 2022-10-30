@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Colin/slime_plort.gd" type="Script" id=2]
 [ext_resource path="res://Marlon/Test1/Plort.png" type="Texture" id=3]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Lilly/path.png" type="Texture" id=12]
 [ext_resource path="res://Fabian/progress_bar.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Fabian/debuff_label.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Fabian/shop.tscn" type="PackedScene" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -76,10 +77,10 @@ scale = Vector2( 1.9375, 1.9375 )
 texture = ExtResource( 4 )
 
 [node name="potion_button" type="Button" parent="player_panel"]
-margin_left = 88.0
-margin_top = 692.0
-margin_right = 217.0
-margin_bottom = 820.0
+margin_left = 169.0
+margin_top = 693.0
+margin_right = 298.0
+margin_bottom = 821.0
 text = "Brew Potion"
 
 [node name="Sprite" type="Sprite" parent="player_panel/potion_button"]
@@ -142,4 +143,12 @@ position = Vector2( 1380, 126 )
 [node name="Node2D2" parent="." instance=ExtResource( 14 )]
 position = Vector2( 3, 204 )
 
-[connection signal="pressed" from="player_panel/potion_button" to="player_panel/potion_subpanel/potion1" method="_on_potion_button_pressed"]
+[node name="Node2D3" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1300, 246 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1306.0
+margin_top = 700.0
+margin_right = 1465.0
+margin_bottom = 817.0
+text = "Next wave"

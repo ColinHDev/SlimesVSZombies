@@ -13,7 +13,9 @@ func _ready():
 
 func _process(delta):	
 	if Input.is_key_pressed(KEY_SPACE):
-		running = true
+		if Game.plort_count >= 5:
+			running = true
+			Game.plort_count -= 5
 		
 	if running:
 		counter -= 1
