@@ -9,8 +9,8 @@ export var size = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$AnimatedSprite.scale.x = size * 2
-	$AnimatedSprite.scale.y = size * 2
+	$AnimatedSprite.scale.x = size * 4
+	$AnimatedSprite.scale.y = size * 4
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,20 +37,12 @@ func split() -> void:
 		slimeInstance1.position.y = position.y
 		var slimeInstance2 = slimeInstance1.duplicate()
 		
-		var currentLane = getLane()
-		print(currentLane)
-		slimeInstance1.position.x = Game.lanes[max(currentLane - 1, 0)]
-		slimeInstance2.position.x = Game.lanes[min(currentLane + 1, Game.lanes.size() - 1)]
-		print(slimeInstance1.position.x)
-		print(slimeInstance2.position.x)
+		slimeInstance1.position.x = max(position.x - 100, Game.minX)
+		slimeInstance2.position.x = min(position.x + 100, Game.maxX)
 		
 		Game.add_child(slimeInstance1)
 		Game.add_child(slimeInstance2)
+	else:
+		Game.plort_count += 1
+		print(Game.plort_count)
 	queue_free()
-
-func getLane() -> int:
-	var x: int = int(floor(position.x))
-	for i in range(0, Game.lanes.size()):
-		if (int(floor(Game.lanes[i])) == x):
-			return i
-	return 0
