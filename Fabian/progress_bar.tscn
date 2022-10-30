@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Fabian/ColorRect.gd" type="Script" id=1]
-[ext_resource path="res://Arial.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Arial.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fabian/ColorRect.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
-font_data = ExtResource( 2 )
+font_data = ExtResource( 1 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -13,7 +13,7 @@ font_data = ExtResource( 2 )
 margin_right = 200.0
 margin_bottom = 50.0
 color = Color( 0.137255, 0.137255, 0.137255, 1 )
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="bar" type="ColorRect" parent="bar_bg"]
 margin_left = 10.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Colin/Game.gd" type="Script" id=1]
 [ext_resource path="res://Colin/slime_plort.gd" type="Script" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://Colin/Slime.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Marlon/Test1/friedhof-bg.png" type="Texture" id=11]
 [ext_resource path="res://Lilly/path.png" type="Texture" id=12]
+[ext_resource path="res://Fabian/progress_bar.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Fabian/debuff_label.tscn" type="PackedScene" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -135,5 +137,11 @@ texture = ExtResource( 6 )
 
 [node name="Slime" parent="." instance=ExtResource( 10 )]
 visible = false
+
+[node name="Node2D" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1380, 126 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3, 204 )
 
 [connection signal="pressed" from="player_panel/potion_button" to="player_panel/potion_subpanel/potion1" method="_on_potion_button_pressed"]
