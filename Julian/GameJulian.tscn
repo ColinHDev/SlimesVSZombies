@@ -7,13 +7,14 @@
 [ext_resource path="res://Lasse/Item_Wand.png" type="Texture" id=5]
 [ext_resource path="res://Marlon/Test1/Boss.png" type="Texture" id=6]
 [ext_resource path="res://Arial.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://Marlon/Test1/Grabstein.png" type="Texture" id=8]
+[ext_resource path="res://Marlon/Test1/Grabstein-1.png" type="Texture" id=8]
 [ext_resource path="res://Colin/potion_plort.gd" type="Script" id=9]
 [ext_resource path="res://Lilly/path.png" type="Texture" id=10]
 [ext_resource path="res://Marlon/Test1/friedhof-bg.png" type="Texture" id=11]
 [ext_resource path="res://Julian/healUnit.gd" type="Script" id=12]
 [ext_resource path="res://Lasse/Leiche.png" type="Texture" id=13]
 [ext_resource path="res://Julian/player_health.gd" type="Script" id=14]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 40

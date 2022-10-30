@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Grabstein.png-dc1d11f801dad0653ed6e3cb9e9af1f1.stex"
+path="res://.import/Grabstein-6.png-959b42083a54dc260fc69df1a1b33074.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Marlon/Test1/Grabstein.png"
-dest_files=[ "res://.import/Grabstein.png-dc1d11f801dad0653ed6e3cb9e9af1f1.stex" ]
+source_file="res://Marlon/Test1/Grabstein-6.png"
+dest_files=[ "res://.import/Grabstein-6.png-959b42083a54dc260fc69df1a1b33074.stex" ]
 
 [params]
 
