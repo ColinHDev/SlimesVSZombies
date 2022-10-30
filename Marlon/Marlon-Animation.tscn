@@ -84,7 +84,7 @@ frames = ExtResource( 5 )
 position = Vector2( 530.5, 763.5 )
 scale = Vector2( 4.28125, 4.28125 )
 frames = ExtResource( 9 )
-frame = 3
+frame = 12
 playing = true
 
 [node name="Transformation" type="AnimatedSprite" parent="."]
@@ -113,4 +113,3 @@ visible = false
 position = Vector2( 815, 436 )
 scale = Vector2( 19.472, 16.6235 )
 frames = ExtResource( 15 )
-playing = true
