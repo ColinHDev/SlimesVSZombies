@@ -25,7 +25,8 @@ scale = Vector2( 1.5084, 1.5084 )
 texture = ExtResource( 7 )
 
 [node name="Play-Button" type="AnimatedSprite" parent="."]
-position = Vector2( 798.222, 449 )
+visible = false
+position = Vector2( 800, 445 )
 scale = Vector2( 0.831482, 0.831481 )
 frames = ExtResource( 11 )
 
@@ -50,7 +51,7 @@ frame = 1
 position = Vector2( 405, 61 )
 scale = Vector2( 9.5625, 7.6875 )
 frames = ExtResource( 3 )
-frame = 3
+frame = 1
 
 [node name="Orange-Hop" type="AnimatedSprite" parent="."]
 position = Vector2( 259, 178 )
@@ -62,7 +63,6 @@ frame = 1
 position = Vector2( 412, 183 )
 scale = Vector2( 9.5625, 7.6875 )
 frames = ExtResource( 12 )
-frame = 1
 
 [node name="Plort" type="Sprite" parent="."]
 position = Vector2( 510, 59 )
@@ -73,7 +73,6 @@ texture = ExtResource( 4 )
 position = Vector2( 291, 744 )
 scale = Vector2( 3.42188, 3.42188 )
 frames = ExtResource( 6 )
-frame = 2
 
 [node name="Grabstein-Blink" type="AnimatedSprite" parent="."]
 position = Vector2( 96, 747 )
@@ -84,7 +83,7 @@ frames = ExtResource( 5 )
 position = Vector2( 530.5, 763.5 )
 scale = Vector2( 4.28125, 4.28125 )
 frames = ExtResource( 9 )
-frame = 3
+frame = 9
 playing = true
 
 [node name="Transformation" type="AnimatedSprite" parent="."]
@@ -103,6 +102,7 @@ frame = 9
 flip_v = true
 
 [node name="SChleimwand2" type="AnimatedSprite" parent="."]
+visible = false
 position = Vector2( 804, 420 )
 scale = Vector2( 1.9, 1.62206 )
 frames = ExtResource( 10 )
@@ -113,4 +113,3 @@ visible = false
 position = Vector2( 815, 436 )
 scale = Vector2( 19.472, 16.6235 )
 frames = ExtResource( 15 )
-playing = true
