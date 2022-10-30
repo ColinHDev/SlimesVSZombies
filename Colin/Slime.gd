@@ -11,24 +11,30 @@ export var size = 2
 func _ready():
 	$AnimatedSprite.scale.x = size * 4
 	$AnimatedSprite.scale.y = size * 4
-
+	
+func _process(delta) -> void:
+	for i in range(0, $AnimatedSprite.frames.get_frame_count($AnimatedSprite.animation)):
+		var collisionFrame: CollisionPolygon2D = get_node("CollisionFrame" + str(i))
+		if i == $AnimatedSprite.frame:
+			collisionFrame.disabled = false
+			collisionFrame.scale.x = $AnimatedSprite.scale.x
+			collisionFrame.scale.y = $AnimatedSprite.scale.y
+		else:
+			collisionFrame.disabled = true
+ 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if (position.y >= get_viewport_rect().end.y):
 		queue_free()
 		return
-	position.y += 1
+	var collision: KinematicCollision2D = move_and_collide(Vector2(0.0, 1.0), true, true, true)
+	if collision == null || collision.collider_id < get_instance_id():
+		position.y += 1
 
-func _input(event: InputEvent):
+func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
-		var currentFrame = $AnimatedSprite.frames.get_frame($AnimatedSprite.animation, $AnimatedSprite.frame)
-		var minX = position.x - (currentFrame.get_width() * scale.x)
-		var minY = position.y - (currentFrame.get_height() * scale.y)
-		var maxX = position.x + (currentFrame.get_width() * scale.x)
-		var maxY = position.y + (currentFrame.get_height() * scale.y)
-		if event.position.x >= minX and event.position.x <= maxX and event.position.y >= minY and event.position.y <= maxY:
-			split()
+		split()
 
 func split() -> void:
 	if (size > 1):
@@ -44,5 +50,4 @@ func split() -> void:
 		Game.add_child(slimeInstance2)
 	else:
 		Game.plort_count += 1
-		print(Game.plort_count)
 	queue_free()
