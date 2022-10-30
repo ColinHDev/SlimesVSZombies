@@ -5,7 +5,7 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-onready var Slime = preload("res://Colin/Slime.tscn")
+onready var Slime = preload("res://scenes/Slime.tscn")
 
 func _ready():
 	spawnSlimes(1500, 3, 600)
@@ -24,7 +24,7 @@ var maxX = 1200
 func spawnSlimes(number: int, maxSize: int, time: int) -> bool:
 	if (spawner != null && spawner.hasFinished() == false):
 		return false;
-	spawner = load("res://Colin/Spawner.gd").new(number, maxSize, time)
+	spawner = load("res://scripts/Spawner.gd").new(number, maxSize, time)
 	return true
 
 # Spawns a slime with the given size at the given coordinates
