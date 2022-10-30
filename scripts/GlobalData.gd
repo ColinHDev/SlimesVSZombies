@@ -1,9 +1,18 @@
 extends Node
 
-var plort_count = 0
-var potion_count = 0
-var heal_count = 0
-var player_lives = 3
+var plort_count: int
+var potion_count: int
+var heal_count: int
+var player_lives: int
 
-var minX = 400
-var maxX = 1200
+var minX: int
+var maxX: int
+
+# Resets all globally stored data to its predefined default values
+func reset() -> void:
+	plort_count = 0
+	potion_count = 0
+	heal_count = 0
+	player_lives = 3
+	minX = 400
+	maxX = 1200
