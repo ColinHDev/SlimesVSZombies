@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Marlon/Schleim-Animiert2.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Marlon/Schleim-Animiert.tres" type="SpriteFrames" id=2]
@@ -9,10 +9,13 @@
 [ext_resource path="res://Lilly/path.png" type="Texture" id=7]
 [ext_resource path="res://Marlon/Test1/friedhof-bg.png" type="Texture" id=8]
 [ext_resource path="res://Lasse/VerbündeterAnimation/verbündeter.tres" type="SpriteFrames" id=9]
+[ext_resource path="res://Marlon/Test1/slime_wall_down.tres" type="SpriteFrames" id=10]
 [ext_resource path="res://Marlon/play-button-blinking.tres" type="SpriteFrames" id=11]
 [ext_resource path="res://Lasse/Purple_Slime/lila_hop.tres" type="SpriteFrames" id=12]
 [ext_resource path="res://Lasse/Orange_Slime/orange_hop.tres" type="SpriteFrames" id=13]
 [ext_resource path="res://Lasse/verwandlung.tres" type="SpriteFrames" id=14]
+[ext_resource path="res://Marlon/Test1/game_over_blinking.tres" type="SpriteFrames" id=15]
+[ext_resource path="res://Marlon/Test1/slime_wall_up.tres" type="SpriteFrames" id=16]
 
 [node name="Node2D" type="Node2D"]
 
@@ -81,7 +84,7 @@ frames = ExtResource( 5 )
 position = Vector2( 530.5, 763.5 )
 scale = Vector2( 4.28125, 4.28125 )
 frames = ExtResource( 9 )
-frame = 7
+frame = 3
 playing = true
 
 [node name="Transformation" type="AnimatedSprite" parent="."]
@@ -89,4 +92,25 @@ position = Vector2( 542, 749 )
 scale = Vector2( 4.79688, 4.79688 )
 frames = ExtResource( 14 )
 frame = 155
+playing = true
+
+[node name="SChleimwand" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 804, 420 )
+scale = Vector2( 1.9, 1.62206 )
+frames = ExtResource( 16 )
+frame = 9
+flip_v = true
+
+[node name="SChleimwand2" type="AnimatedSprite" parent="."]
+position = Vector2( 804, 420 )
+scale = Vector2( 1.9, 1.62206 )
+frames = ExtResource( 10 )
+frame = 9
+
+[node name="Game_over_blink" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 815, 436 )
+scale = Vector2( 19.472, 16.6235 )
+frames = ExtResource( 15 )
 playing = true
