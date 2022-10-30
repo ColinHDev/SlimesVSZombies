@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Colin/Game.gd" type="Script" id=1]
 [ext_resource path="res://Colin/slime_plort.gd" type="Script" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Arial.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Marlon/Test1/Grabstein.png" type="Texture" id=8]
 [ext_resource path="res://Colin/potion_plort.gd" type="Script" id=9]
+[ext_resource path="res://Lilly/path.png" type="Texture" id=10]
+[ext_resource path="res://Marlon/Test1/friedhof-bg.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -20,6 +22,13 @@ font_data = ExtResource( 7 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 820, 450 )
+scale = Vector2( 1.51134, 1.51134 )
+texture = ExtResource( 10 )
 
 [node name="player_panel" type="Panel" parent="."]
 margin_left = 1300.0
@@ -96,18 +105,23 @@ margin_top = 600.0
 margin_right = 300.0
 margin_bottom = 900.0
 
+[node name="Friedhof-bg" type="Sprite" parent="enemy_panel/graveyard"]
+position = Vector2( 150, 140.5 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 11 )
+
 [node name="Sprite" type="Sprite" parent="enemy_panel/graveyard"]
-position = Vector2( 76, 56 )
+position = Vector2( 125, 46 )
 scale = Vector2( 3.375, 3.375 )
 texture = ExtResource( 8 )
 
 [node name="Sprite2" type="Sprite" parent="enemy_panel/graveyard"]
-position = Vector2( 202, 113 )
+position = Vector2( 204, 146 )
 scale = Vector2( 3.375, 3.375 )
 texture = ExtResource( 8 )
 
 [node name="Sprite3" type="Sprite" parent="enemy_panel/graveyard"]
-position = Vector2( 79, 204 )
+position = Vector2( 82, 215 )
 scale = Vector2( 3.375, 3.375 )
 texture = ExtResource( 8 )
 
@@ -116,12 +130,12 @@ margin_right = 200.0
 margin_bottom = 100.0
 
 [node name="ItemWand" type="Sprite" parent="enemy_panel/enemy_debuff"]
-position = Vector2( 100, 79 )
+position = Vector2( 105, 95 )
 scale = Vector2( 6.0625, 5.9375 )
 texture = ExtResource( 5 )
 
 [node name="Boss" type="Sprite" parent="enemy_panel/enemy_debuff"]
-position = Vector2( 107, 90 )
+position = Vector2( 108, 102 )
 scale = Vector2( 5.90625, 5.90625 )
 texture = ExtResource( 6 )
 
