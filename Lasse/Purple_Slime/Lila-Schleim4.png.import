@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Grabstein.png-dc1d11f801dad0653ed6e3cb9e9af1f1.stex"
+path="res://.import/Lila-Schleim4.png-1d5328b3850bc9c79bb16eccdb71ac2e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Marlon/Test1/Grabstein.png"
-dest_files=[ "res://.import/Grabstein.png-dc1d11f801dad0653ed6e3cb9e9af1f1.stex" ]
+source_file="res://Lasse/Purple_Slime/Lila-Schleim4.png"
+dest_files=[ "res://.import/Lila-Schleim4.png-1d5328b3850bc9c79bb16eccdb71ac2e.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
