@@ -8,6 +8,9 @@ var player_lives: int
 var minX: int
 var maxX: int
 
+func _ready() -> void:
+	reset()
+
 # Resets all globally stored data to its predefined default values
 func reset() -> void:
 	plort_count = 0
