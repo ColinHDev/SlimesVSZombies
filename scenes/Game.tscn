@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://assets/slime_wall_down.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://scripts/slime_plort.gd" type="Script" id=2]
@@ -20,8 +20,11 @@
 [ext_resource path="res://assets/wave-icon.png" type="Texture" id=19]
 [ext_resource path="res://scenes/wave_counter.gd" type="Script" id=20]
 [ext_resource path="res://assets/wave-over-text.png" type="Texture" id=21]
+[ext_resource path="res://Marlon/Grabstein-blinking.tres" type="SpriteFrames" id=21]
 [ext_resource path="res://assets/bg-right-hud.png" type="Texture" id=22]
 [ext_resource path="res://assets/bg-left-hud.png" type="Texture" id=23]
+[ext_resource path="res://Marlon/Grabstein-loading.tres" type="SpriteFrames" id=24]
+[ext_resource path="res://scenes/GraveBlinking.gd" type="Script" id=25]
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
@@ -230,6 +233,40 @@ texture = ExtResource( 8 )
 position = Vector2( 82, 215 )
 scale = Vector2( 3.375, 3.375 )
 texture = ExtResource( 8 )
+
+[node name="Grave1" type="Node2D" parent="enemy_panel/graveyard"]
+position = Vector2( 120, 40 )
+scale = Vector2( 3.5, 3.5 )
+script = ExtResource( 25 )
+
+[node name="Loading" type="AnimatedSprite" parent="enemy_panel/graveyard/Grave1"]
+frames = ExtResource( 24 )
+
+[node name="Blinking" type="AnimatedSprite" parent="enemy_panel/graveyard/Grave1"]
+frames = ExtResource( 21 )
+
+[node name="Grave2" type="Node2D" parent="enemy_panel/graveyard"]
+position = Vector2( 200, 140 )
+scale = Vector2( 3.5, 3.5 )
+script = ExtResource( 25 )
+
+[node name="Loading" type="AnimatedSprite" parent="enemy_panel/graveyard/Grave2"]
+frames = ExtResource( 24 )
+
+[node name="Blinking" type="AnimatedSprite" parent="enemy_panel/graveyard/Grave2"]
+frames = ExtResource( 21 )
+
+[node name="Grave3" type="Node2D" parent="enemy_panel/graveyard"]
+position = Vector2( 80, 220 )
+scale = Vector2( 3.5, 3.5 )
+script = ExtResource( 25 )
+
+[node name="Loading" type="AnimatedSprite" parent="enemy_panel/graveyard/Grave3"]
+frames = ExtResource( 24 )
+frame = 9
+
+[node name="Blinking" type="AnimatedSprite" parent="enemy_panel/graveyard/Grave3"]
+frames = ExtResource( 21 )
 
 [node name="enemy_debuff" type="Label" parent="enemy_panel"]
 margin_right = 200.0
