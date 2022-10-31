@@ -16,8 +16,6 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Game="*res://Colin/Game.gd"
-SlimePlort="*res://Colin/slime_plort.gd"
 GlobalData="*res://scripts/GlobalData.gd"
 
 [debug]

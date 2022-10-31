@@ -99,6 +99,14 @@ func getRemainingSlimeNumber() -> int:
 	if (spawner != null and !spawner.hasFinished()):
 		remainingSlime += spawner.numberLeft
 	return remainingSlime
+	
+func findNearestSlime(hero: Vector2):
+	var nextSlime = null
+	var nextSlimeDistance: float = 1000000000
+	for slime in $SlimeContainer.get_children():
+		if ((slime.position - hero).length() < nextSlimeDistance):
+			nextSlime = slime
+	return nextSlime
 
 var maxSize: int = 2
 var maxSpeed: float = 1.2
