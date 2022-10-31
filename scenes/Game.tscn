@@ -238,6 +238,7 @@ frames = ExtResource( 24 )
 [node name="Blinking" type="AnimatedSprite" parent="enemy_panel/graveyard/Grave1"]
 visible = false
 frames = ExtResource( 21 )
+frame = 1
 playing = true
 
 [node name="Grave2" type="Node2D" parent="enemy_panel/graveyard"]
@@ -251,6 +252,7 @@ frames = ExtResource( 24 )
 [node name="Blinking" type="AnimatedSprite" parent="enemy_panel/graveyard/Grave2"]
 visible = false
 frames = ExtResource( 21 )
+frame = 1
 playing = true
 
 [node name="Grave3" type="Node2D" parent="enemy_panel/graveyard"]
@@ -264,7 +266,6 @@ frames = ExtResource( 24 )
 [node name="Blinking" type="AnimatedSprite" parent="enemy_panel/graveyard/Grave3"]
 visible = false
 frames = ExtResource( 21 )
-frame = 1
 playing = true
 
 [node name="enemy_debuff" type="Label" parent="enemy_panel"]
@@ -338,6 +339,7 @@ texture = ExtResource( 26 )
 position = Vector2( 6, 202 )
 
 [connection signal="pressed" from="player_panel/potion_button" to="player_panel/potion_subpanel/potion1" method="_on_potion_button_pressed"]
+[connection signal="toggled" from="player_panel/potion_button" to="player_panel/potion_button/Sprite/Sprite" method="_on_potion_button_toggled"]
 [connection signal="pressed" from="enemy_panel/graveyard/Button" to="enemy_panel/graveyard" method="_on_button_pressed"]
 [connection signal="pressed" from="enemy_panel/graveyard/Button2" to="enemy_panel/graveyard" method="_on_button_pressed"]
 [connection signal="pressed" from="enemy_panel/graveyard/Button3" to="enemy_panel/graveyard" method="_on_button_pressed"]
