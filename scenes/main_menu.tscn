@@ -5,7 +5,7 @@
 [ext_resource path="res://Marlon/play-button-blinking.tres" type="SpriteFrames" id=3]
 [ext_resource path="res://Marlon/Test1/Menu.png" type="Texture" id=4]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Button" type="Button" parent="."]
