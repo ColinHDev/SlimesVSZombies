@@ -13,7 +13,11 @@ var spawnCounter = 60
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	$Idle.visible = false
+	$Revive.visible = true
+	$Revive.frame = 0
+	$Revive.playing = true
+
 func _process(delta) -> void:
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,5 +31,14 @@ func _on_Button_pressed():
 	rng.randomize()
 	posY = GlobalData.minY+rng.randi_range(0, GlobalData.maxY-GlobalData.minY)
 	get_parent().spawnHero(posX,posY)
-	if $Revive.frame == 131:
-		self.idle.visible = true
+
+
+func _on_Revive_animation_finished():
+	$Revive.visible = false
+
+
+func _on_Revive_frame_changed():
+	if ($Revive.frame == 131):
+		$Idle.visible = true
+		$Idle.frame = 0
+		$Idle.playing = true
