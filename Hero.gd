@@ -32,7 +32,7 @@ func _on_Button_pressed():
 		posX = GlobalData.minX+rng.randi_range(0, GlobalData.maxX-GlobalData.minX)
 		rng.randomize()
 		posY = GlobalData.minY+rng.randi_range(0, GlobalData.maxY-GlobalData.minY)
-		get_parent().spawnHero(posX,posY)
+		get_parent().get_parent().spawnHero(posX,posY)
 
 func _on_Revive_animation_finished():
 	$Revive.visible = false

@@ -44,7 +44,7 @@ func spawnHero(x: float, y: float) -> void:
 	var heroInstance = hero.instance()
 	heroInstance.position.x = x
 	heroInstance.position.y = y
-	self.add_child(heroInstance)
+	$HeroContainer.add_child(heroInstance)
 
 var spawner = null
 
@@ -74,6 +74,8 @@ func _process(delta):
 			3:
 				amount = int(round(amount * 1.1))
 		time += 1
+		for hero in $HeroContainer.get_children():
+			hero.queue_free()
 
 var waveCount: int = 0
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://assets/slime_wall_down.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://scripts/slime_plort.gd" type="Script" id=2]
@@ -28,7 +28,6 @@ bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
-outline_size = 2
 font_data = ExtResource( 7 )
 
 [sub_resource type="StyleBoxFlat" id=5]
@@ -36,7 +35,6 @@ bg_color = Color( 0.439216, 0.211765, 0.211765, 0 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 40
-outline_size = 2
 font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -47,8 +45,7 @@ font_data = ExtResource( 7 )
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 40
-outline_size = 2
+size = 32
 font_data = ExtResource( 7 )
 
 [node name="Game" type="Node2D"]
@@ -267,6 +264,8 @@ texture = ExtResource( 5 )
 position = Vector2( -0.262283, 0.78688 )
 scale = Vector2( 2.03279, 2.03279 )
 texture = ExtResource( 14 )
+
+[node name="HeroContainer" type="Node" parent="."]
 
 [node name="SlimeContainer" type="Node" parent="."]
 
