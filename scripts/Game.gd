@@ -77,7 +77,7 @@ func getRemainingSlimeNumber() -> int:
 	return remainingSlime
 
 var maxSize: int = 2
-var maxSpeed: float = 1.5
+var maxSpeed: float = 1.2
 var maxStrength: float = 1.0
 var amount: int = 10
 var time: int = 10
