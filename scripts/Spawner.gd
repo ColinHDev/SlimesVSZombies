@@ -4,13 +4,13 @@ var number: int
 var numberLeft: int
 var maxSize: int
 var maxSpeed: float
-var maxStrength: int
+var maxStrength: float
 var time: int
 var startTime: int
 var lastSpawn: int = 0
 var rng: RandomNumberGenerator
 
-func _init(numberOfSlimes: int, slimeMaxSize: int, slimeMaxSpeed: float, slimeMaxStrength: int, timeToSpawn: int):
+func _init(numberOfSlimes: int, slimeMaxSize: int, slimeMaxSpeed: float, slimeMaxStrength: float, timeToSpawn: int):
 	number = numberOfSlimes
 	numberLeft = numberOfSlimes
 	maxSize = slimeMaxSize
@@ -63,8 +63,8 @@ func getRandomSize() -> int:
 func getRandomSpeed() -> float:
 	return rng.randf_range(0.5, maxSpeed)
 
-func getRandomStrength() -> int:
-	return rng.randi_range(1, maxStrength)
+func getRandomStrength() -> float:
+	return rng.randf_range(1.0, maxStrength)
 
 func getRandomX() -> int:
 	return rng.randi_range(GlobalData.minX, GlobalData.maxX)

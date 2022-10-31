@@ -176,13 +176,13 @@ margin_right = 1465.0
 margin_bottom = 817.0
 text = "Next wave"
 
+[node name="SlimeContainer" type="Node" parent="."]
+
 [node name="slime_wall" type="AnimatedSprite" parent="."]
 visible = false
 position = Vector2( 800, 420 )
 scale = Vector2( 1.9, 1.62206 )
 frames = ExtResource( 1 )
-
-[node name="SlimeContainer" type="Node" parent="."]
 
 [connection signal="pressed" from="player_panel/potion_button" to="player_panel/potion_subpanel/potion1" method="_on_potion_button_pressed"]
 [connection signal="pressed" from="next_wave_button" to="." method="_on_next_wave_button_pressed"]
