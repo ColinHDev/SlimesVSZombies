@@ -66,6 +66,9 @@ func _process(delta):
 			3:
 				amount = int(round(amount * 1.1))
 		time += 1
+		waveCount += 1
+
+var waveCount: int = 0
 
 # Returns how many slimes are on the scene and still need to be spawned
 func getRemainingSlimeNumber() -> int:

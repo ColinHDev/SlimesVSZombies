@@ -187,6 +187,7 @@ texture = ExtResource( 5 )
 position = Vector2( -0.262283, 0.78688 )
 scale = Vector2( 2.03279, 2.03279 )
 texture = ExtResource( 14 )
+
 [node name="SlimeContainer" type="Node" parent="."]
 
 [node name="slime_wall" type="AnimatedSprite" parent="."]
