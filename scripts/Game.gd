@@ -36,7 +36,6 @@ func spawnSlime(size: int, speed: float, x: float, y: float) -> void:
 	slimeInstance.position.x = x
 	slimeInstance.position.y = y
 	$SlimeContainer.add_child(slimeInstance)
-	print(1)
 
 var spawner = null
 
