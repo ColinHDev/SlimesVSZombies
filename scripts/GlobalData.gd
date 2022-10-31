@@ -16,6 +16,6 @@ func reset() -> void:
 	plort_count = 0
 	potion_count = 0
 	heal_count = 0
-	player_lives = 3
+	player_lives = 10
 	minX = 400
 	maxX = 1200

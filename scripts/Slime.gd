@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var size: int
 var speed: float
+var strength: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,7 +27,7 @@ func _process(delta) -> void:
 func _physics_process(delta):
 	var height: int = $AnimatedSprite.frames.get_frame($AnimatedSprite.animation, $AnimatedSprite.frame).get_height()
 	if (position.y - (height * $AnimatedSprite.scale.x) / 2 >= get_viewport_rect().end.y):
-		get_parent().get_parent().reduceLive()
+		get_parent().get_parent().reduceLive(strength)
 		queue_free()
 		return
 	position.y += speed
