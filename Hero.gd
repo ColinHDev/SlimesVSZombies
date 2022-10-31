@@ -30,9 +30,10 @@ func _physics_process(delta):
 	lastShot = OS.get_system_time_secs()
 	slime.split()
 
-onready var bullet = preload("")
+onready var bullet = preload("res://scenes/projectile.tscn")
 
 func shoot(slime) -> void:
+	var bulletInstance = bullet.instance()
 	
 
 func _on_Revive_animation_finished():
