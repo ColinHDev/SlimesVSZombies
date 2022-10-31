@@ -66,7 +66,6 @@ func _process(delta):
 			3:
 				amount = int(round(amount * 1.1))
 		time += 1
-		waveCount += 1
 
 var waveCount: int = 0
 
@@ -84,4 +83,5 @@ var amount: int = 10
 var time: int = 10
 
 func _on_next_wave_button_pressed():
-	spawnSlimes(amount, maxSize, maxSpeed, maxStrength, time)
+	if spawnSlimes(amount, maxSize, maxSpeed, maxStrength, time):
+		waveCount += 1
