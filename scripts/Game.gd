@@ -50,7 +50,12 @@ func spawnHero(x: float, y: float) -> void:
 
 var spawner = null
 
+var debuffs = ["Speed: ", "Strength: ", "Size: "]
+
 func _process(delta):
+	
+	get_node("Node2D/Label").text = (debuffs[0] + "\n" + debuffs[1] + "\n" + debuffs[2])
+	get_node("Node2D/Label2").text = (String(maxSpeed) + "\n" + String(maxStrength) + "\n" + String(maxSize))
 	
 	if waveover && get_node("wave_over").position.y <= 1000:
 		get_node("wave_over").position.y += delta * 300
