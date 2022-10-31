@@ -25,6 +25,7 @@ func spawnSlimes(number: int, maxSize: int, maxSpeed: float, maxStrength: float,
 	return true
 
 onready var slime = preload("res://scenes/Slime.tscn")
+onready var hero = preload("res://Julian/Hero.tscn")
 
 # Spawns a slime with the given size, speed and strength at the given coordinates
 # If a negative y coordinate is given, then a position according to the sprite 
@@ -37,6 +38,13 @@ func spawnSlime(size: int, speed: float, strength: float, x: float, y: float) ->
 	slimeInstance.position.x = x
 	slimeInstance.position.y = y
 	$SlimeContainer.add_child(slimeInstance)
+	
+# Spawns a hero at the given coordinates
+func spawnHero(x: float, y: float) -> void:
+	var heroInstance = hero.instance()
+	heroInstance.position.x = x
+	heroInstance.position.y = y
+	self.add_child(heroInstance)
 
 var spawner = null
 
@@ -85,3 +93,4 @@ var time: int = 10
 func _on_next_wave_button_pressed():
 	if spawnSlimes(amount, maxSize, maxSpeed, maxStrength, time):
 		waveCount += 1
+

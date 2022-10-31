@@ -9,6 +9,8 @@ var damageValues: Array
 
 var minX: int
 var maxX: int
+var minY: int
+var maxY: int
 
 func _ready() -> void:
 	reset()
@@ -22,3 +24,5 @@ func reset() -> void:
 	damageValues = [1, 3, 7, 15]
 	minX = 400
 	maxX = 1200
+	minY = 700
+	maxY = 800

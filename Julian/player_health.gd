@@ -13,5 +13,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-		text = String(Game.player_lives)
+		text = String(GlobalData.player_lives)
 #	pass
