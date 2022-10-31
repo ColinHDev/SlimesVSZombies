@@ -51,7 +51,21 @@ func _process(delta):
 			
 	if (spawner != null and getRemainingSlimeNumber() <= 0):
 		spawner = null
-		
+		var rng = RandomNumberGenerator.new()
+		rng.randomize()
+		match(rng.randi_range(0, 3)):
+			0:
+				if maxSize < 4:
+					maxSize += 1
+				else:
+					maxStrength = min(maxStrength + 0.1, 3.0)
+			1:
+				maxSpeed = min(maxSpeed + 0.1, 3.0)
+			2:
+				maxStrength = min(maxStrength + 0.1, 3.0)
+			3:
+				amount = int(round(amount * 1.1))
+		time += 1
 
 # Returns how many slimes are on the scene and still need to be spawned
 func getRemainingSlimeNumber() -> int:
@@ -64,6 +78,7 @@ var maxSize: int = 2
 var maxSpeed: float = 1.5
 var maxStrength: float = 1.0
 var amount: int = 10
+var time: int = 10
 
 func _on_next_wave_button_pressed():
-	spawnSlimes(amount, maxSize, maxSpeed, maxStrength, 10)
+	spawnSlimes(amount, maxSize, maxSpeed, maxStrength, time)
