@@ -25,13 +25,14 @@ func _process(delta) -> void:
 #pass
 
 func _on_Button_pressed():
-	var rng = RandomNumberGenerator.new()
-	rng.randomize()
-	posX = GlobalData.minX+rng.randi_range(0, GlobalData.maxX-GlobalData.minX)
-	rng.randomize()
-	posY = GlobalData.minY+rng.randi_range(0, GlobalData.maxY-GlobalData.minY)
-	get_parent().spawnHero(posX,posY)
-
+	if GlobalData.potion_count >=1:
+		GlobalData.potion_count -= 1
+		var rng = RandomNumberGenerator.new()
+		rng.randomize()
+		posX = GlobalData.minX+rng.randi_range(0, GlobalData.maxX-GlobalData.minX)
+		rng.randomize()
+		posY = GlobalData.minY+rng.randi_range(0, GlobalData.maxY-GlobalData.minY)
+		get_parent().spawnHero(posX,posY)
 
 func _on_Revive_animation_finished():
 	$Revive.visible = false
