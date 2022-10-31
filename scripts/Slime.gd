@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var size: int
 var speed: float
+var strength: float
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,7 +27,9 @@ func _process(delta) -> void:
 func _physics_process(delta):
 	var height: int = $AnimatedSprite.frames.get_frame($AnimatedSprite.animation, $AnimatedSprite.frame).get_height()
 	if (position.y - (height * $AnimatedSprite.scale.x) / 2 >= get_viewport_rect().end.y):
-		get_parent().reduceLive()
+		get_parent().get_parent().reduceLive(
+			int(round(GlobalData.damageValues[size - 1] * strength))
+		)
 		queue_free()
 		return
 	position.y += speed
@@ -37,8 +40,8 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 
 func split() -> void:
 	if (size > 1):
-		get_parent().spawnSlime(size - 1, speed, max(position.x - 100, GlobalData.minX), position.y)
-		get_parent().spawnSlime(size - 1, speed, min(position.x + 100, GlobalData.maxX), position.y)
+		get_parent().get_parent().spawnSlime(size - 1, speed, max(position.x - 100, GlobalData.minX), position.y)
+		get_parent().get_parent().spawnSlime(size - 1, speed, min(position.x + 100, GlobalData.maxX), position.y)
 	else:
 		GlobalData.plort_count += 1
 	queue_free()

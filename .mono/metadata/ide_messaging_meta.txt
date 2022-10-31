@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 ﻿46019
 /home/fappi/Programs/Godot_v3.5.1-stable_mono_x11_64/Godot_v3.5.1-stable_mono_x11.64
+=======
+﻿49860
+D:/Programme/Godot_v3.5.1-stable_mono_win64/Godot_v3.5.1-stable_mono_win64.exe
+>>>>>>> main

@@ -178,6 +178,7 @@ margin_right = 1451.0
 margin_bottom = 820.0
 text = "Next wave"
 
+<<<<<<< HEAD
 [node name="Sprite2" type="Sprite" parent="next_wave_button"]
 position = Vector2( 63.9999, 63.0001 )
 scale = Vector2( 4.531, 4.531 )
@@ -187,6 +188,9 @@ texture = ExtResource( 5 )
 position = Vector2( -0.262283, 0.78688 )
 scale = Vector2( 2.03279, 2.03279 )
 texture = ExtResource( 14 )
+=======
+[node name="SlimeContainer" type="Node" parent="."]
+>>>>>>> main
 
 [node name="slime_wall" type="AnimatedSprite" parent="."]
 visible = false
