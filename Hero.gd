@@ -14,6 +14,7 @@ var lastShot: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	scale = Vector2(2.0, 2.0)
 	$Idle.visible = false
 	$Revive.visible = true
 	$Revive.frame = 0
