@@ -10,6 +10,7 @@ var posX = 0;
 var posY = 0;
 export var runningSpawn = false
 var spawnCounter = 60
+var lastShot: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,11 +19,21 @@ func _ready():
 	$Revive.frame = 0
 	$Revive.playing = true
 
-func _process(delta) -> void:
-	pass
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _physics_process(delta):
-#pass
+func _physics_process(delta):
+	if $Revive.visible:
+		return
+	if lastShot + 5 > OS.get_system_time_secs():
+		return
+	var slime = get_parent().get_parent().findNearestSlime(position)
+	if (slime == null):
+		return
+	lastShot = OS.get_system_time_secs()
+	slime.split()
+
+onready var bullet = preload("")
+
+func shoot(slime) -> void:
+	
 
 func _on_Revive_animation_finished():
 	$Revive.visible = false
