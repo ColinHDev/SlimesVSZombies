@@ -54,6 +54,7 @@ margin_top = 10.0
 margin_right = 58.0
 margin_bottom = 58.0
 rect_scale = Vector2( 2, 2 )
+disabled = true
 
 [node name="Sprite" type="Sprite" parent="shop_panel/candy_button"]
 position = Vector2( 24, 24 )
@@ -86,6 +87,7 @@ margin_top = 10.0
 margin_right = 206.0
 margin_bottom = 58.0
 rect_scale = Vector2( 2, 2 )
+disabled = true
 
 [node name="Sprite" type="Sprite" parent="shop_panel/gun_button"]
 position = Vector2( 24.5, 24 )
@@ -142,6 +144,7 @@ margin_top = 146.0
 margin_right = 58.0
 margin_bottom = 194.0
 rect_scale = Vector2( 2, 2 )
+disabled = true
 
 [node name="Sprite" type="Sprite" parent="shop_panel/grave_button"]
 position = Vector2( 24, 24 )
