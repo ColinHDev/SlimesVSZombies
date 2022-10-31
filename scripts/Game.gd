@@ -48,9 +48,8 @@ func _process(delta):
 			spawnSlime(spawner.getRandomSize(), spawner.getRandomSpeed(), spawner.getRandomX(), -1)
 			toSpawn -= 1
 			
-#func hasSlimes() -> bool:
-	#for children in get_children():
-		
+# func hasSlimes() -> bool:
+	
 
 var maxSize: int = 2
 var maxSpeed: float = 2
@@ -58,3 +57,4 @@ var amount: int = 10
 
 func _on_next_wave_button_pressed():
 	spawnSlimes(amount, maxSize, maxSpeed, 10)
+	# hasSlimes()
