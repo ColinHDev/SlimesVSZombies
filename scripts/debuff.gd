@@ -1,5 +1,5 @@
 extends Label
-var debuffs = ["Speed: ", "Strength: ", "Size: ", "Amount: "]
+var debuffs = ["Speed:      ", "Strength:   ", "Size:         ", "Amount:    "]
 var speed = 1
 var strength = 1
 var size = 1
