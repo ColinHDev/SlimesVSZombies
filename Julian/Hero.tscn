@@ -13,7 +13,7 @@ script = ExtResource( 1 )
 visible = false
 scale = Vector2( 1.5, 2 )
 frames = ExtResource( 2 )
-frame = 3
+frame = 10
 playing = true
 
 [node name="Revive" type="AnimatedSprite" parent="."]

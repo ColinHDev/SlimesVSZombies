@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://assets/slime_wall_down.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://scripts/slime_plort.gd" type="Script" id=2]
@@ -15,18 +15,17 @@
 [ext_resource path="res://Marlon/Test1/Schleim-1.png" type="Texture" id=13]
 [ext_resource path="res://assets/Play.png" type="Texture" id=14]
 [ext_resource path="res://scenes/shop.tscn" type="PackedScene" id=15]
-[ext_resource path="res://assets/wave-over-text.png" type="Texture" id=16]
+[ext_resource path="res://scripts/graveyard_buttons.gd" type="Script" id=16]
 [ext_resource path="res://Julian/player_health.gd" type="Script" id=17]
 [ext_resource path="res://Lilly/big_heart.png" type="Texture" id=18]
 [ext_resource path="res://assets/wave-icon.png" type="Texture" id=19]
 [ext_resource path="res://scenes/wave_counter.gd" type="Script" id=20]
-[ext_resource path="res://scripts/graveyard_buttons.gd" type="Script" id=21]
-[ext_resource path="res://assets/wave-over-text.png" type="Texture" id=21]
 [ext_resource path="res://Marlon/Grabstein-blinking.tres" type="SpriteFrames" id=21]
 [ext_resource path="res://assets/bg-right-hud.png" type="Texture" id=22]
 [ext_resource path="res://assets/bg-left-hud.png" type="Texture" id=23]
 [ext_resource path="res://Marlon/Grabstein-loading.tres" type="SpriteFrames" id=24]
 [ext_resource path="res://scenes/GraveBlinking.gd" type="Script" id=25]
+[ext_resource path="res://assets/wave-over-text.png" type="Texture" id=26]
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
@@ -194,7 +193,7 @@ centered = false
 margin_top = 600.0
 margin_right = 300.0
 margin_bottom = 900.0
-script = ExtResource( 21 )
+script = ExtResource( 16 )
 
 [node name="Button" type="Button" parent="enemy_panel/graveyard"]
 margin_left = 150.0
@@ -336,7 +335,7 @@ texture = ExtResource( 19 )
 [node name="wave_over" type="Sprite" parent="."]
 position = Vector2( 804, -100 )
 scale = Vector2( 10.0937, 10.0937 )
-texture = ExtResource( 16 )
+texture = ExtResource( 26 )
 
 [connection signal="pressed" from="player_panel/potion_button" to="player_panel/potion_subpanel/potion1" method="_on_potion_button_pressed"]
 [connection signal="pressed" from="enemy_panel/graveyard/Button" to="enemy_panel/graveyard" method="_on_button_pressed"]
