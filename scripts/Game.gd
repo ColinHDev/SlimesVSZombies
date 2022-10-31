@@ -19,7 +19,7 @@ func _on_slime_wall_animation_finished():
 # and a random speed between 0.5 and maxSpeed
 # Returns false if another previously added spawner is still running, otherwise true
 func spawnSlimes(number: int, maxSize: int, maxSpeed: float, time: int) -> bool:
-	if (spawner != null && spawner.hasFinished() == false):
+	if (getRemainingSlimeNumber() > 0):
 		return false;
 	spawner = load("res://scripts/Spawner.gd").new(number, maxSize, maxSpeed, time)
 	return true
@@ -35,7 +35,8 @@ func spawnSlime(size: int, speed: float, x: float, y: float) -> void:
 	slimeInstance.speed = speed
 	slimeInstance.position.x = x
 	slimeInstance.position.y = y
-	add_child(slimeInstance)
+	$SlimeContainer.add_child(slimeInstance)
+	print(1)
 
 var spawner = null
 
@@ -47,9 +48,13 @@ func _process(delta):
 		while toSpawn > 0:
 			spawnSlime(spawner.getRandomSize(), spawner.getRandomSpeed(), spawner.getRandomX(), -1)
 			toSpawn -= 1
-			
-# func hasSlimes() -> bool:
-	
+
+# Returns how many slimes are on the scene and still need to be spawned
+func getRemainingSlimeNumber() -> int:
+	var remainingSlime: int = $SlimeContainer.get_child_count()
+	if (spawner != null and !spawner.hasFinished()):
+		remainingSlime += spawner.numberLeft
+	return remainingSlime
 
 var maxSize: int = 2
 var maxSpeed: float = 2
@@ -57,4 +62,3 @@ var amount: int = 10
 
 func _on_next_wave_button_pressed():
 	spawnSlimes(amount, maxSize, maxSpeed, 10)
-	# hasSlimes()

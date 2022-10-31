@@ -1,6 +1,7 @@
 extends Node
 
 var number: int
+var numberLeft: int
 var maxSize: int
 var maxSpeed: float
 var time: int
@@ -11,6 +12,7 @@ var rng: RandomNumberGenerator
 
 func _init(numberOfSlimes: int, slimeMaxSize: int, slimeMaxSpeed: float, timeToSpawn: int):
 	number = numberOfSlimes
+	numberLeft = numberOfSlimes
 	maxSize = slimeMaxSize
 	maxSpeed = slimeMaxSpeed
 	time = timeToSpawn
@@ -34,6 +36,7 @@ func getAmountToSpawn() -> int:
 	if (x >= 1.0):
 		var count: int = int(floor(x))
 		tmp = x - float(count)
+		numberLeft -= count
 		return count
 	tmp = x
 	return 0
