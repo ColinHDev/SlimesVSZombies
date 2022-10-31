@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://assets/slime_wall_down.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://scripts/slime_plort.gd" type="Script" id=2]
@@ -15,7 +15,6 @@
 [ext_resource path="res://Marlon/Test1/Schleim-1.png" type="Texture" id=13]
 [ext_resource path="res://assets/Play.png" type="Texture" id=14]
 [ext_resource path="res://scenes/shop.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Julian/Hero.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Julian/player_health.gd" type="Script" id=17]
 [ext_resource path="res://Lilly/big_heart.png" type="Texture" id=18]
 [ext_resource path="res://assets/wave-icon.png" type="Texture" id=19]
@@ -29,7 +28,6 @@ bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
-outline_size = 4
 font_data = ExtResource( 7 )
 
 [sub_resource type="StyleBoxFlat" id=5]
@@ -37,7 +35,6 @@ bg_color = Color( 0.439216, 0.211765, 0.211765, 0 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 40
-outline_size = 4
 font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -48,9 +45,7 @@ font_data = ExtResource( 7 )
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 40
-outline_size = 4
-outline_color = Color( 0, 0, 0, 1 )
+size = 32
 font_data = ExtResource( 7 )
 
 [node name="Game" type="Node2D"]
@@ -298,17 +293,11 @@ position = Vector2( 39, 24 )
 scale = Vector2( 4.188, 4.188 )
 texture = ExtResource( 19 )
 
-[node name="Hero" parent="." instance=ExtResource( 16 )]
-position = Vector2( -141, 402 )
-
 [node name="wave_over" type="Sprite" parent="."]
 position = Vector2( 804, -100 )
 scale = Vector2( 10.0937, 10.0937 )
 texture = ExtResource( 21 )
 
 [connection signal="pressed" from="player_panel/potion_button" to="player_panel/potion_subpanel/potion1" method="_on_potion_button_pressed"]
-[connection signal="pressed" from="enemy_panel/graveyard/Button" to="Hero" method="_on_Button_pressed"]
-[connection signal="pressed" from="enemy_panel/graveyard/Button2" to="Hero" method="_on_Button_pressed"]
-[connection signal="pressed" from="enemy_panel/graveyard/Button3" to="Hero" method="_on_Button_pressed"]
 [connection signal="pressed" from="next_wave_button" to="." method="_on_next_wave_button_pressed"]
 [connection signal="animation_finished" from="slime_wall" to="." method="_on_slime_wall_animation_finished"]
