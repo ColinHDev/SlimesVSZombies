@@ -28,13 +28,15 @@ func _physics_process(delta):
 	if (slime == null):
 		return
 	lastShot = OS.get_system_time_secs()
-	slime.split()
-
+	shoot(slime)
+	
 onready var bullet = preload("res://scenes/projectile.tscn")
 
 func shoot(slime) -> void:
 	var bulletInstance = bullet.instance()
-	
+	bulletInstance.position = position
+	bulletInstance.setTarget(slime)
+	get_parent().add_child(bulletInstance)
 
 func _on_Revive_animation_finished():
 	$Revive.visible = false

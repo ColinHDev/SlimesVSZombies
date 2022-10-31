@@ -76,6 +76,7 @@ func _process(delta):
 		time += 1
 		for hero in $HeroContainer.get_children():
 			hero.queue_free()
+		
 
 var waveCount: int = 0
 
@@ -93,8 +94,10 @@ func findNearestSlime(hero: Vector2):
 	var nextSlime = null
 	var nextSlimeDistance: float = 1000000000
 	for slime in $SlimeContainer.get_children():
-		if ((slime.position - hero).length() < nextSlimeDistance):
+		var distance: float = hero.distance_to(slime.position)
+		if (distance < nextSlimeDistance):
 			nextSlime = slime
+			nextSlimeDistance = distance
 	return nextSlime
 
 var maxSize: int = 2
