@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://assets/slime_wall_down.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://scripts/slime_plort.gd" type="Script" id=2]
@@ -57,6 +57,7 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
 
 [node name="Game" type="Node2D"]
+scale = Vector2( 1.00059, 1 )
 script = ExtResource( 10 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -151,6 +152,7 @@ margin_left = 169.0
 margin_top = 693.0
 margin_right = 298.0
 margin_bottom = 821.0
+rect_scale = Vector2( 0.992307, 0.987156 )
 text = "Brew Potion"
 
 [node name="Sprite" type="Sprite" parent="player_panel/potion_button"]
