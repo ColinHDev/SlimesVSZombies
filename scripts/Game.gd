@@ -1,5 +1,7 @@
 extends Node2D
 
+var waveover = false
+
 func isGameOver() -> bool:
 	return GlobalData.player_lives <= 0
 
@@ -49,6 +51,14 @@ func spawnHero(x: float, y: float) -> void:
 var spawner = null
 
 func _process(delta):
+	
+	if waveover && get_node("wave_over").position.y <= 1000:
+		get_node("wave_over").position.y += delta * 300
+	else:
+		waveover = false
+		get_node("wave_over").position.y = -100	
+		
+	
 	if isGameOver():
 		return
 	if (spawner != null && spawner.hasFinished() == false):
@@ -76,6 +86,7 @@ func _process(delta):
 		time += 1
 		for hero in $HeroContainer.get_children():
 			hero.queue_free()
+		waveover = true
 
 var waveCount: int = 0
 
