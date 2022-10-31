@@ -77,6 +77,9 @@ func _process(delta):
 
 var waveCount: int = 0
 
+func getWaveCount() -> int:
+	return int(max(waveCount, 1))
+
 # Returns how many slimes are on the scene and still need to be spawned
 func getRemainingSlimeNumber() -> int:
 	var remainingSlime: int = $SlimeContainer.get_child_count()
