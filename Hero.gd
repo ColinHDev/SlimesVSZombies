@@ -18,14 +18,7 @@ func _process(delta) -> void:
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _physics_process(delta):
-#	i+=1
-#	if i > 100:
-#		i = 0
-#		rng.randomize()
-#		posX = GlobalData.minX+rng.randi_range(0, GlobalData.maxX-GlobalData.minX)
-#		rng.randomize()
-#		posY = GlobalData.minY+rng.randi_range(0, GlobalData.maxY-GlobalData.minY)
-
+#pass
 
 func _on_Button_pressed():
 	var rng = RandomNumberGenerator.new()
@@ -34,3 +27,5 @@ func _on_Button_pressed():
 	rng.randomize()
 	posY = GlobalData.minY+rng.randi_range(0, GlobalData.maxY-GlobalData.minY)
 	get_parent().spawnHero(posX,posY)
+	if $Revive.frame == 131:
+		self.idle.visible = true
