@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/slime_wall_down.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://scripts/slime_plort.gd" type="Script" id=2]
@@ -20,7 +20,6 @@
 [ext_resource path="res://Lilly/big_heart.png" type="Texture" id=18]
 [ext_resource path="res://assets/wave-icon.png" type="Texture" id=19]
 [ext_resource path="res://scenes/wave_counter.gd" type="Script" id=20]
-[ext_resource path="res://assets/transparent.png" type="Material" id=21]
 [ext_resource path="res://assets/bg-right-hud.png" type="Texture" id=22]
 [ext_resource path="res://assets/bg-left-hud.png" type="Texture" id=23]
 
@@ -57,7 +56,6 @@ scale = Vector2( 1.51134, 1.51134 )
 texture = ExtResource( 12 )
 
 [node name="player_panel" type="Panel" parent="."]
-material = ExtResource( 21 )
 margin_left = 1300.0
 margin_right = 1600.0
 margin_bottom = 900.0
@@ -181,6 +179,27 @@ margin_top = 600.0
 margin_right = 300.0
 margin_bottom = 900.0
 
+[node name="Button" type="Button" parent="enemy_panel/graveyard"]
+margin_left = 150.0
+margin_top = 103.0
+margin_right = 241.0
+margin_bottom = 200.0
+text = "Spawn Hero"
+
+[node name="Button2" type="Button" parent="enemy_panel/graveyard"]
+margin_left = 78.0
+margin_top = 2.0
+margin_right = 169.0
+margin_bottom = 99.0
+text = "Spawn Hero"
+
+[node name="Button3" type="Button" parent="enemy_panel/graveyard"]
+margin_left = 34.0
+margin_top = 173.0
+margin_right = 125.0
+margin_bottom = 270.0
+text = "Spawn Hero"
+
 [node name="Friedhof-bg" type="Sprite" parent="enemy_panel/graveyard"]
 position = Vector2( 150, 140.5 )
 scale = Vector2( 2, 2 )
@@ -261,22 +280,12 @@ position = Vector2( 39, 24 )
 scale = Vector2( 4.188, 4.188 )
 texture = ExtResource( 19 )
 
-[node name="Button" type="Button" parent="."]
-margin_left = 1100.0
-margin_top = 710.0
-margin_right = 1267.0
-margin_bottom = 871.0
-text = "Spawn Hero"
-
 [node name="Hero" parent="." instance=ExtResource( 16 )]
-position = Vector2( -485, 236 )
-
-[node name="AnimatedSprite2" type="AnimatedSprite" parent="Hero"]
-position = Vector2( 92, 2 )
-scale = Vector2( 4.6875, 5.3125 )
-playing = true
+position = Vector2( -141, 402 )
 
 [connection signal="pressed" from="player_panel/potion_button" to="player_panel/potion_subpanel/potion1" method="_on_potion_button_pressed"]
+[connection signal="pressed" from="enemy_panel/graveyard/Button" to="Hero" method="_on_Button_pressed"]
+[connection signal="pressed" from="enemy_panel/graveyard/Button2" to="Hero" method="_on_Button_pressed"]
+[connection signal="pressed" from="enemy_panel/graveyard/Button3" to="Hero" method="_on_Button_pressed"]
 [connection signal="pressed" from="next_wave_button" to="." method="_on_next_wave_button_pressed"]
 [connection signal="animation_finished" from="slime_wall" to="." method="_on_slime_wall_animation_finished"]
-[connection signal="pressed" from="Button" to="Hero" method="_on_Button_pressed"]
