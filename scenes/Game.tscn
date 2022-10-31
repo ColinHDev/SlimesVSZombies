@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://assets/slime_wall_down.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://scripts/slime_plort.gd" type="Script" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://assets/Item_Wand.png" type="Texture" id=5]
 [ext_resource path="res://assets/Boss.png" type="Texture" id=6]
 [ext_resource path="res://Arial.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://assets/Grabstein-1.png" type="Texture" id=8]
 [ext_resource path="res://scripts/potion_plort.gd" type="Script" id=9]
 [ext_resource path="res://scripts/Game.gd" type="Script" id=10]
 [ext_resource path="res://assets/friedhof-bg.png" type="Texture" id=11]
@@ -32,6 +31,7 @@ bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
+outline_size = 2
 font_data = ExtResource( 7 )
 
 [sub_resource type="StyleBoxFlat" id=5]
@@ -39,6 +39,7 @@ bg_color = Color( 0.439216, 0.211765, 0.211765, 0 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 40
+outline_size = 2
 font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -49,7 +50,8 @@ font_data = ExtResource( 7 )
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 32
+size = 40
+outline_size = 2
 font_data = ExtResource( 7 )
 
 [node name="Game" type="Node2D"]
@@ -221,21 +223,6 @@ position = Vector2( 150, 140.5 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 11 )
 
-[node name="Sprite" type="Sprite" parent="enemy_panel/graveyard"]
-position = Vector2( 125, 46 )
-scale = Vector2( 3.375, 3.375 )
-texture = ExtResource( 8 )
-
-[node name="Sprite2" type="Sprite" parent="enemy_panel/graveyard"]
-position = Vector2( 204, 146 )
-scale = Vector2( 3.375, 3.375 )
-texture = ExtResource( 8 )
-
-[node name="Sprite3" type="Sprite" parent="enemy_panel/graveyard"]
-position = Vector2( 82, 215 )
-scale = Vector2( 3.375, 3.375 )
-texture = ExtResource( 8 )
-
 [node name="Grave1" type="Node2D" parent="enemy_panel/graveyard"]
 position = Vector2( 120, 40 )
 scale = Vector2( 3.5, 3.5 )
@@ -245,7 +232,9 @@ script = ExtResource( 25 )
 frames = ExtResource( 24 )
 
 [node name="Blinking" type="AnimatedSprite" parent="enemy_panel/graveyard/Grave1"]
+visible = false
 frames = ExtResource( 21 )
+playing = true
 
 [node name="Grave2" type="Node2D" parent="enemy_panel/graveyard"]
 position = Vector2( 200, 140 )
@@ -256,7 +245,9 @@ script = ExtResource( 25 )
 frames = ExtResource( 24 )
 
 [node name="Blinking" type="AnimatedSprite" parent="enemy_panel/graveyard/Grave2"]
+visible = false
 frames = ExtResource( 21 )
+playing = true
 
 [node name="Grave3" type="Node2D" parent="enemy_panel/graveyard"]
 position = Vector2( 80, 220 )
@@ -265,10 +256,12 @@ script = ExtResource( 25 )
 
 [node name="Loading" type="AnimatedSprite" parent="enemy_panel/graveyard/Grave3"]
 frames = ExtResource( 24 )
-frame = 9
 
 [node name="Blinking" type="AnimatedSprite" parent="enemy_panel/graveyard/Grave3"]
+visible = false
 frames = ExtResource( 21 )
+frame = 1
+playing = true
 
 [node name="enemy_debuff" type="Label" parent="enemy_panel"]
 margin_right = 200.0

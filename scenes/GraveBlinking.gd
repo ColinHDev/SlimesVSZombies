@@ -17,5 +17,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if $Loading.frame == 9:
-		return
-#	pass
+		$Loading.visible = true
+		$Blinking.playing = true
+		$Blinking.visible = true
